@@ -1,7 +1,15 @@
 .env
 data/cache/
 data/investigations/
+data/irs/
+data/scans/
 __pycache__/
 *.pyc
 .venv/
 *.egg-info/
+
+# Large scan CSVs (keep markdown reports, exclude raw data)
+research/scans/*/raw_scores.csv
+
+# Case data (investigation-specific, not committed)
+cases/

@@ -331,6 +331,101 @@ def compare(name1: str, name2: str):
 
 
 @cli.group()
+def scan():
+    """Nonprofit population scanner — IRS 990 bulk data analysis."""
+    pass
+
+
+@scan.command("download")
+@click.option("--year", default=2024, help="SOI Tax Stats year to download")
+def scan_download(year: int):
+    """Download IRS bulk data for population scanning."""
+    from scanner.downloader import download_soi
+    console.print(f"[blue]Downloading IRS SOI Tax Stats for {year}...[/blue]")
+    try:
+        path = download_soi(year)
+        console.print(f"[green]Downloaded: {path}[/green]")
+    except FileNotFoundError as e:
+        console.print(f"[red]{e}[/red]")
+
+
+@scan.command("run")
+@click.option("--state", default=None, help="Filter by state (2-letter code)")
+@click.option("--beat", default=None, help="Beat filter: health, political, religious, education, veterans, arts")
+@click.option("--min-revenue", default=100_000, help="Minimum revenue threshold")
+@click.option("--year", default=2024, help="SOI Tax Stats year")
+@click.option("--top", "top_n", default=50, help="Show top N results")
+def scan_run(state, beat, min_revenue, year, top_n):
+    """Run population anomaly scan on IRS 990 data."""
+    from scanner.downloader import load_soi
+    from scanner.analyzer import scan_population
+    from scanner.rankings import create_scan_snapshot
+
+    console.print(f"[blue]Loading SOI data for {year}...[/blue]")
+    try:
+        df = load_soi(year)
+    except FileNotFoundError:
+        console.print("[red]IRS data not found. Run 'investigate scan download' first.[/red]")
+        return
+
+    console.print(f"[green]Loaded {len(df):,} organizations[/green]")
+
+    scope = state or beat or "national"
+    console.print(f"[blue]Scanning ({scope}, min revenue ${min_revenue:,})...[/blue]")
+
+    scored = scan_population(df, min_revenue=min_revenue, state=state, beat=beat)
+
+    if len(scored) == 0:
+        console.print("[yellow]No organizations matched the filters.[/yellow]")
+        return
+
+    flagged = len(scored[scored["flags"] != ""])
+    high = len(scored[scored["anomaly_score"] >= 50])
+    console.print(f"[green]Scored {len(scored):,} orgs | {flagged:,} flagged | {high} scoring > 50[/green]")
+
+    # Create research snapshot
+    console.print("[blue]Creating research snapshot...[/blue]")
+    snapshot_dir = create_scan_snapshot(
+        scored,
+        scan_name=scope,
+        parameters={
+            "state": state, "beat": beat, "min_revenue": min_revenue, "year": year,
+        },
+        source_files=[{
+            "name": f"IRS SOI Tax Stats {year}",
+            "version": str(year),
+            "url": f"https://www.irs.gov/pub/irs-soi/{year}eofinextract990.csv",
+            "retrieved": datetime.now().isoformat(),
+        }],
+    )
+    console.print(f"[green]Snapshot saved: {snapshot_dir}[/green]")
+
+    # Print top results
+    console.print(f"\n[bold]Top {min(top_n, len(scored))} Anomalies:[/bold]\n")
+    table = Table()
+    table.add_column("#", style="dim")
+    table.add_column("Name", style="cyan", max_width=35)
+    table.add_column("State")
+    table.add_column("Revenue", justify="right")
+    table.add_column("Officer Comp", justify="right")
+    table.add_column("Score", justify="right", style="bold")
+    table.add_column("Flags", max_width=40)
+
+    for i, (_, row) in enumerate(scored.head(top_n).iterrows(), 1):
+        score_style = "red" if row["anomaly_score"] >= 50 else ("yellow" if row["anomaly_score"] >= 30 else "green")
+        table.add_row(
+            str(i),
+            str(row.get("name", ""))[:35],
+            str(row.get("state", "")),
+            f"${row.get('revenue', 0):,.0f}",
+            f"${row.get('officer_comp', 0):,.0f}",
+            f"[{score_style}]{row.get('anomaly_score', 0):.1f}[/{score_style}]",
+            str(row.get("flags", ""))[:40],
+        )
+    console.print(table)
+
+
+@cli.group()
 def watchlist():
     """Manage the investigative watchlist."""
     pass
@@ -387,6 +482,12 @@ def watchlist_list():
 def watchlist_scan(sources: str | None):
     """Scan all watchlisted entities for changes."""
     from watchlist.scanner import scan_watchlist
+    from watchlist.store import list_entities
+
+    entries = list_entities()
+    if not entries:
+        console.print("[yellow]Watchlist is empty. Add entities with: watchlist add <name>[/yellow]")
+        return
 
     source_filter = sources.split(",") if sources else None
 
@@ -396,7 +497,7 @@ def watchlist_scan(sources: str | None):
     changes = asyncio.run(scan_watchlist(_search))
 
     if not changes:
-        console.print("[green]No changes detected across watchlisted entities.[/green]")
+        console.print(f"[green]No changes detected across {len(entries)} watchlisted entities.[/green]")
     else:
         console.print(f"\n[bold red]Changes detected for {len(changes)} entities:[/bold red]\n")
         for change in changes:

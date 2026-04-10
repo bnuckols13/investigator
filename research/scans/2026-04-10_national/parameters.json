@@ -1,0 +1,10 @@
+{
+  "state": null,
+  "beat": null,
+  "min_revenue": 100000,
+  "year": 2024,
+  "scan_date": "2026-04-10",
+  "total_orgs_scanned": 301484,
+  "orgs_with_flags": 248236,
+  "tool_version": "12c695d9693c"
+}
