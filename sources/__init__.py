@@ -34,9 +34,9 @@ def get_enabled_sources() -> list[BaseSource]:
     from .usaspending import USASpendingSource
     sources.append(USASpendingSource())
 
-    if config.COURTLISTENER_TOKEN:
-        from .courtlistener import CourtListenerSource
-        sources.append(CourtListenerSource())
+    # CourtListener works without auth (rate-limited), better with token
+    from .courtlistener import CourtListenerSource
+    sources.append(CourtListenerSource())
 
     return sources
 

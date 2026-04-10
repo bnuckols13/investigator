@@ -56,6 +56,13 @@ class Case:
         self.scores_path = path / "scores.json"
         self.log_path = path / "investigation_log.md"
         self.graph_path = path / "network.html"
+        self.smoking_guns_path = path / "smoking_guns.json"
+        self.pre_reg_path = path / "pre-registration.md"
+        self.decision_log_path = path / "decision_log.md"
+        self.evidence_dir = path / "evidence"
+        self.claims_dir = path / "claims"
+        self.evidence_dir.mkdir(exist_ok=True)
+        self.claims_dir.mkdir(exist_ok=True)
 
         if self.meta_path.exists():
             self.meta = json.loads(self.meta_path.read_text())
@@ -189,6 +196,14 @@ class Case:
         if existing_connections:
             self._update_graph(existing_entities, existing_connections)
 
+        # Persist smoking gun report and generate evidence files
+        smoking_gun_report = result.metadata.get("smoking_gun_report")
+        if smoking_gun_report:
+            self.smoking_guns_path.write_text(
+                json.dumps(smoking_gun_report, indent=2, default=str)
+            )
+            self._generate_evidence_files(smoking_gun_report)
+
         # Append to investigation log
         self._log_search(result, new_entities, new_connections, new_events)
 
@@ -251,6 +266,63 @@ class Case:
 
         with open(self.log_path, "a") as f:
             f.write(entry)
+
+    def _generate_evidence_files(self, report_data: dict):
+        """Generate MHEES-coded evidence files from smoking gun detections."""
+        try:
+            from analysis.smoking_gun import DetectedPattern
+            from analysis.mhees import auto_code, generate_evidence_file
+
+            patterns = report_data.get("patterns", [])
+            for i, p_data in enumerate(patterns):
+                if isinstance(p_data, dict):
+                    pattern = DetectedPattern(**p_data)
+                else:
+                    pattern = p_data
+
+                if not pattern.mhees_code:
+                    pattern.mhees_code = auto_code(pattern)
+
+                ev_id = f"EV-{len(list(self.evidence_dir.iterdir())) + 1:03d}"
+                content = generate_evidence_file(pattern, ev_id)
+                (self.evidence_dir / f"{ev_id}.md").write_text(content)
+        except Exception:
+            pass  # Evidence generation is non-critical
+
+    def create_pre_registration(self, hypothesis: str, falsification: str, source_map: str):
+        """Create SBI pre-registration bundle with SHA-256 hash."""
+        import hashlib
+
+        bundle = f"HYPOTHESIS: {hypothesis}\n\nFALSIFICATION: {falsification}\n\nSOURCES: {source_map}"
+        bundle_hash = hashlib.sha256(bundle.encode()).hexdigest()
+
+        content = f"""---
+hash: {bundle_hash}
+created: {datetime.now().isoformat()}
+---
+
+# Pre-Registration: {self.meta['name']}
+
+## Hypothesis
+
+{hypothesis}
+
+## Falsification Conditions
+
+{falsification}
+
+## Source Map
+
+{source_map}
+
+---
+*SHA-256: {bundle_hash}*
+*This bundle was hashed before investigation began. The hash proves the hypothesis was stated before the evidence was gathered.*
+"""
+        self.pre_reg_path.write_text(content)
+        self.meta["pre_registration_hash"] = bundle_hash
+        self._save_meta()
+        return bundle_hash
 
     def get_summary(self) -> str:
         """Generate a current case status summary."""

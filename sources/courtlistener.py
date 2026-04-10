@@ -13,10 +13,10 @@ BASE_URL = "https://www.courtlistener.com/api/rest/v4"
 
 
 def _headers():
-    return {
-        "Authorization": f"Token {config.COURTLISTENER_TOKEN}",
-        "Content-Type": "application/json",
-    }
+    headers = {"Content-Type": "application/json", "Accept": "application/json"}
+    if config.COURTLISTENER_TOKEN:
+        headers["Authorization"] = f"Token {config.COURTLISTENER_TOKEN}"
+    return headers
 
 
 class CourtListenerSource(BaseSource):

@@ -26,6 +26,53 @@ def generate_memo(result: SearchResult) -> str:
             lines.append(f"**Sources failed:** {', '.join(sources_failed)}")
         lines.append("")
 
+    # Smoking Gun Analysis (if available)
+    sg_report = result.metadata.get("smoking_gun_report")
+    if sg_report and sg_report.get("patterns"):
+        heat = sg_report.get("heat_score", 0)
+        heat_label = "CRITICAL" if heat >= 70 else ("HIGH" if heat >= 40 else ("MODERATE" if heat >= 20 else "LOW"))
+        lines.append(f"## Smoking Gun Analysis — HEAT: {heat:.0f}/100 ({heat_label})\n")
+
+        summary = sg_report.get("scan_summary", {})
+        lines.append(f"*{summary.get('entities_scanned', 0)} entities scanned | {summary.get('patterns_tested', 0)} patterns tested | **{summary.get('patterns_fired', 0)} patterns fired***\n")
+
+        if sg_report.get("top_narrative"):
+            lines.append(f"> {sg_report['top_narrative']}\n")
+
+        for p in sg_report["patterns"][:5]:
+            tier_badge = {"smoking_gun": "SMOKING GUN", "strong": "STRONG", "indicator": "INDICATOR"}.get(p.get("tier", ""), "")
+            lines.append(f"### [{tier_badge}] {p.get('display_name', '')} — Score: {p.get('final_score', 0):.0f}")
+            mhees = p.get("mhees_code", "")
+            if mhees:
+                lines.append(f"*MHEES: {mhees}*\n")
+            lines.append(f"{p.get('narrative', '')}\n")
+
+            # Evidence chain
+            evidence = p.get("evidence", [])
+            if evidence:
+                lines.append("**Evidence:**")
+                for ev in evidence:
+                    src = ev.get("source", "")
+                    desc = ev.get("description", "")
+                    lines.append(f"- [{src}] {desc}")
+                lines.append("")
+
+            # Multipliers
+            mults = p.get("multipliers", {})
+            if mults:
+                mult_parts = [f"{k}: x{v:.2f}" for k, v in mults.items()]
+                lines.append(f"**Multipliers:** {' | '.join(mult_parts)}\n")
+
+            # Next steps
+            steps = p.get("next_steps", [])
+            if steps:
+                lines.append("**Next steps:**")
+                for step in steps:
+                    lines.append(f"- {step}")
+                lines.append("")
+
+        lines.append("---\n")
+
     # Executive summary
     lines.append("## Executive Summary\n")
     n_entities = len(result.entities)

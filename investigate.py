@@ -122,6 +122,26 @@ async def run_search(
     # Score all entities
     scores = score_all(canonical, all_connections, all_events, graph)
 
+    # Run smoking gun composite detectors
+    console.print("\n[blue]Running smoking gun analysis...[/blue]")
+    from analysis.smoking_gun import detect_all as detect_smoking_guns
+    from analysis.mhees import auto_code
+    sg_report = detect_smoking_guns(canonical, all_connections, all_events, graph)
+
+    # Auto-code MHEES for each detected pattern
+    for pattern in sg_report.patterns:
+        if not pattern.mhees_code:
+            pattern.mhees_code = auto_code(pattern)
+
+    if sg_report.patterns:
+        console.print(f"  [bold red]HEAT SCORE: {sg_report.heat_score:.0f}/100 — {len(sg_report.patterns)} patterns detected[/bold red]")
+        for p in sg_report.patterns[:3]:
+            console.print(f"    [{p.tier.upper()}] {p.display_name}: {p.final_score:.0f} ({p.mhees_code})")
+    else:
+        console.print("  [green]No smoking gun patterns detected[/green]")
+
+    sg_data = sg_report.model_dump(mode="json")
+
     elapsed = (datetime.now() - start_time).total_seconds()
 
     return SearchResult(
@@ -137,6 +157,7 @@ async def run_search(
             "sources_queried": source_names,
             "sources_succeeded": sources_succeeded,
             "sources_failed": sources_failed,
+            "smoking_gun_report": sg_data,
             "mermaid": mermaid_diagram,
             "network_analysis": network_analysis,
         },
