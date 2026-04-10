@@ -129,6 +129,33 @@ async def run_search(
 
         console.print(f"  [green]{len(all_connections)} connections, {len(all_events)} timeline events[/green]")
 
+    # Auto-enrich high-priority entities (skip if this is already an enrichment sub-search)
+    if limit > 10:  # Only enrich on primary searches, not sub-searches
+        from enrichment import auto_enrich
+
+        async def _enrichment_search(q, **kwargs):
+            return await run_search(q, limit=10)  # limit=10 prevents recursive enrichment
+
+        # Build a preliminary score to identify high-priority entities
+        prelim_scores = score_all(canonical, all_connections, all_events, None)
+
+        try:
+            enrichment_results = await auto_enrich(
+                SearchResult(query=query, entities=canonical, connections=all_connections,
+                             events=all_events, scores=prelim_scores, metadata={}),
+                _enrichment_search, threshold=30, max_followups=3,
+            )
+            for er in enrichment_results:
+                for ent in er.entities:
+                    if ent.id not in {e.id for e in canonical}:
+                        canonical.append(ent)
+                all_connections.extend(er.connections)
+                all_events.extend(er.events)
+            if enrichment_results:
+                console.print(f"  [cyan]Auto-enrichment added {sum(len(r.entities) for r in enrichment_results)} entities from {len(enrichment_results)} follow-up searches[/cyan]")
+        except Exception:
+            pass  # Enrichment is non-critical
+
     # Build network graph
     graph = build_graph(canonical, all_connections)
     network_analysis = analyze_graph(graph)

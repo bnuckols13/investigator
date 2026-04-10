@@ -38,6 +38,10 @@ def get_enabled_sources() -> list[BaseSource]:
     from .courtlistener import CourtListenerSource
     sources.append(CourtListenerSource())
 
+    # ProPublica Nonprofit Explorer — no auth needed
+    from .propublica import ProPublicaSource
+    sources.append(ProPublicaSource())
+
     return sources
 
 

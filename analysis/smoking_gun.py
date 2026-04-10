@@ -568,6 +568,9 @@ class ConcurrentContradictionDetector(BaseDetector):
             if "govt_contractor" in entity.flags:
                 sources = ctx.sources_for_entity(entity.id)
                 contract_conns = ctx.get_connections_for(entity.id, "contract")
+                # Also check connections under usaspending variant IDs
+                usa_id = f"usaspending:recipient:{entity.name}"
+                contract_conns.extend(ctx.get_connections_for(usa_id, "contract"))
                 total_value = sum(c.weight or 0 for c in contract_conns)
 
                 mults = {"sources": source_independence_multiplier(sources)}

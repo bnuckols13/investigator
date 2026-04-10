@@ -16,6 +16,7 @@ class SourceEnum(str, Enum):
     openfec = "openfec"
     usaspending = "usaspending"
     courtlistener = "courtlistener"
+    propublica = "propublica"
 
 
 class EntityType(str, Enum):

@@ -22,6 +22,7 @@ SOURCE_RELIABILITY = {
     "opensanctions": "B",  # Compiled from authoritative govt lists, high accuracy
     "openfec": "B",        # Self-reported campaign finance, generally reliable
     "aleph": "B",          # OCCRP-curated corporate registries + leaked docs
+    "propublica": "A",     # IRS 990 filings, mandatory nonprofit disclosures
 }
 
 # Source provenance mapping (Axis P)
@@ -32,6 +33,7 @@ SOURCE_PROVENANCE = {
     "opensanctions": "P1", # Compiled from public government lists
     "openfec": "P1",
     "aleph": "P2",         # Institutional document (corporate registries, some leaks)
+    "propublica": "P1",    # IRS 990 filings, verified public record
 }
 
 

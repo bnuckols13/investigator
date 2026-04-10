@@ -136,13 +136,26 @@ def deduplicate(entities: list[Entity]) -> list[Entity]:
         "openfec": 3,
         "usaspending": 4,
         "courtlistener": 5,
+        "propublica": 6,
+    }
+
+    # Entity type priority: prefer companies/orgs over unknown/person for corporate queries
+    type_priority = {
+        "company": 0,
+        "organization": 1,
+        "person": 2,
+        "unknown": 3,
+        "vessel": 4,
     }
 
     groups = resolve_entities(entities)
     canonical = []
     for group in groups:
-        # Pick the entity from the highest-priority source
-        best = min(group, key=lambda m: source_priority.get(m.entity.source.value, 99))
+        # Pick the entity with best type (company > person) then best source
+        best = min(group, key=lambda m: (
+            type_priority.get(m.entity.entity_type.value, 99),
+            source_priority.get(m.entity.source.value, 99),
+        ))
         # Merge flags from all matches
         all_flags = set()
         all_aliases = set()

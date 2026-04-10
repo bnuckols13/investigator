@@ -22,6 +22,11 @@ class OpenFECSource(BaseSource):
         from config import make_httpx_client
 
         entities = []
+        # Search with original query AND common PAC suffixes
+        search_terms = [query]
+        # Add PAC variant if not already a PAC name
+        if "pac" not in query.lower() and "committee" not in query.lower():
+            search_terms.append(f"{query} PAC")
         params = {"api_key": config.OPENFEC_API_KEY, "q": query, "per_page": min(limit, 20)}
 
         async with make_httpx_client() as client:
@@ -52,30 +57,35 @@ class OpenFECSource(BaseSource):
             except Exception:
                 pass
 
-            # Search committees
-            try:
-                resp = await client.get(f"{BASE_URL}/committees/", params=params)
-                resp.raise_for_status()
-                data = resp.json()
-                for comm in data.get("results", []):
-                    entities.append(Entity(
-                        id=f"fec:{comm.get('committee_id', '')}",
-                        source=SourceEnum.openfec,
-                        name=comm.get("name", "Unknown"),
-                        entity_type=EntityType.organization,
-                        countries=["us"],
-                        properties={
-                            "committee_id": [comm.get("committee_id", "")],
-                            "committee_type": [comm.get("committee_type_full", "")],
-                            "designation": [comm.get("designation_full", "")],
-                            "party": [comm.get("party_full", "")],
-                            "treasurer_name": [comm.get("treasurer_name", "")] if comm.get("treasurer_name") else [],
-                        },
-                        source_url=f"https://www.fec.gov/data/committee/{comm.get('committee_id', '')}/",
-                        flags=["political_committee"],
-                    ))
-            except Exception:
-                pass
+            # Search committees (try original query + PAC variant)
+            for term in search_terms:
+                try:
+                    comm_params = {"api_key": config.OPENFEC_API_KEY, "q": term, "per_page": min(limit, 20)}
+                    resp = await client.get(f"{BASE_URL}/committees/", params=comm_params)
+                    resp.raise_for_status()
+                    data = resp.json()
+                    for comm in data.get("results", []):
+                        # Skip duplicates
+                        if any(e.id == f"fec:{comm.get('committee_id', '')}" for e in entities):
+                            continue
+                        entities.append(Entity(
+                            id=f"fec:{comm.get('committee_id', '')}",
+                            source=SourceEnum.openfec,
+                            name=comm.get("name", "Unknown"),
+                            entity_type=EntityType.organization,
+                            countries=["us"],
+                            properties={
+                                "committee_id": [comm.get("committee_id", "")],
+                                "committee_type": [comm.get("committee_type_full", "")],
+                                "designation": [comm.get("designation_full", "")],
+                                "party": [comm.get("party_full", "")],
+                                "treasurer_name": [comm.get("treasurer_name", "")] if comm.get("treasurer_name") else [],
+                            },
+                            source_url=f"https://www.fec.gov/data/committee/{comm.get('committee_id', '')}/",
+                            flags=["political_committee"],
+                        ))
+                except Exception:
+                    pass
 
         return entities[:limit]
 
