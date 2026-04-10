@@ -82,24 +82,50 @@ class ProPublicaSource(BaseSource):
                 org = data.get("organization", {})
                 filings = data.get("filings_with_data", [])
 
-                # Get latest filing data
+                # Get latest filing data — the org endpoint includes full 990 extract
                 latest = filings[0] if filings else {}
-                revenue = latest.get("totrevenue", 0)
-                expenses = latest.get("totfuncexpns", 0)
-                assets = latest.get("totassetsend", 0)
-                liabilities = latest.get("totliabend", 0)
-                officer_comp = latest.get("pct_compnsatncurrofcr", 0)
-                contributions = latest.get("totcntrbgfts", 0)
-                program_revenue = latest.get("totprgmrevnue", 0)
+                revenue = latest.get("totrevenue", 0) or 0
+                expenses = latest.get("totfuncexpns", 0) or 0
+                assets = latest.get("totassetsend", 0) or 0
+                liabilities = latest.get("totliabend", 0) or 0
+                contributions = latest.get("totcntrbgfts", 0) or 0
+                program_revenue = latest.get("totprgmrevnue", 0) or 0
 
-                # Flag suspicious patterns
+                # Part VII compensation data (dollar amounts, not percentages)
+                officer_comp_dollars = latest.get("compnsatncurrofcr", 0) or 0
+                other_salaries = latest.get("othrsalwages", 0) or 0
+                payroll_tax = latest.get("payrolltx", 0) or 0
+                fundraising_expense = latest.get("profndraising", 0) or 0
+                net_assets = latest.get("totnetassetend", 0) or 0
+
+                # Flag suspicious patterns using dollar amounts
                 flags = ["nonprofit"]
-                if revenue > 0 and expenses > 0:
-                    overhead_ratio = 1 - (latest.get("totprgmrevnue", 0) / revenue) if revenue else 0
-                    if overhead_ratio > 0.5:
+
+                # High overhead: program revenue < 65% of total revenue
+                if revenue > 100_000:
+                    program_ratio = program_revenue / revenue if revenue else 0
+                    if program_ratio < 0.65:
                         flags.append("high_overhead")
-                if officer_comp and revenue and officer_comp > 0.15:
-                    flags.append("high_exec_comp")
+
+                # High exec comp: officer compensation > 2% of revenue OR > $1M
+                if revenue > 0 and officer_comp_dollars > 0:
+                    comp_ratio = officer_comp_dollars / revenue
+                    if comp_ratio > 0.02 or officer_comp_dollars > 1_000_000:
+                        flags.append("high_exec_comp")
+
+                # Revenue decline: compare most recent two filings
+                if len(filings) >= 2:
+                    prev_revenue = filings[1].get("totrevenue", 0) or 0
+                    if prev_revenue > 0 and revenue > 0:
+                        change = (revenue - prev_revenue) / prev_revenue
+                        if change < -0.25:
+                            flags.append("revenue_decline")
+
+                # High fundraising cost ratio
+                if fundraising_expense > 0 and contributions > 0:
+                    fundraising_ratio = fundraising_expense / contributions
+                    if fundraising_ratio > 0.5:
+                        flags.append("high_fundraising_cost")
 
                 return Entity(
                     id=entity_id,
@@ -119,9 +145,15 @@ class ProPublicaSource(BaseSource):
                         "total_expenses": [str(expenses)],
                         "total_assets": [str(assets)],
                         "total_liabilities": [str(liabilities)],
+                        "net_assets": [str(net_assets)],
                         "contributions": [str(contributions)],
                         "program_revenue": [str(program_revenue)],
-                        "officer_compensation_pct": [str(officer_comp)],
+                        "officer_compensation": [str(officer_comp_dollars)],
+                        "other_salaries": [str(other_salaries)],
+                        "payroll_tax": [str(payroll_tax)],
+                        "fundraising_expense": [str(fundraising_expense)],
+                        "program_ratio": [f"{(program_revenue/revenue*100) if revenue else 0:.1f}%"],
+                        "comp_ratio": [f"{(officer_comp_dollars/revenue*100) if revenue else 0:.2f}%"],
                         "tax_period": [str(latest.get("tax_prd_yr", ""))],
                         "filing_count": [str(len(filings))],
                     },
