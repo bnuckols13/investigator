@@ -1,0 +1,22 @@
+[project]
+name = "investigator"
+version = "0.1.0"
+description = "Multi-source OSINT investigative journalism toolkit"
+requires-python = ">=3.9"
+dependencies = [
+    "httpx[http2]>=0.27",
+    "alephclient>=2.7",
+    "rapidfuzz>=3.0",
+    "networkx>=3.0",
+    "pydantic>=2.0",
+    "python-dotenv>=1.0",
+    "click>=8.0",
+    "rich>=13.0",
+]
+
+[project.scripts]
+investigate = "investigate:cli"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
