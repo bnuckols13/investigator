@@ -61,7 +61,7 @@ def score_entity(
     recent = [e for e in events if e.date >= cutoff]
     components["recency"] = 10 if recent else 0
 
-    total = sum(components.values())
+    total = min(sum(components.values()), 100)
 
     # Build flags summary
     flags = list(set(entity.flags))

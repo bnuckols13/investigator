@@ -52,7 +52,7 @@ class USASpendingSource(BaseSource):
                     json={
                         "filters": {
                             "recipient_search_text": [query],
-                            "time_period": [{"start_date": "2020-01-01", "end_date": "2026-12-31"}],
+                            "award_type_codes": ["A", "B", "C", "D"],
                         },
                         "fields": [
                             "Award ID", "Recipient Name", "Award Amount",
@@ -125,23 +125,23 @@ class USASpendingSource(BaseSource):
         return None
 
     async def get_connections(self, entity_id: str) -> list[Connection]:
-        """Find contract/grant connections."""
-        raw_id = entity_id.replace("usaspending:", "")
+        """Find contract/grant connections by searching entity name."""
         from config import make_httpx_client
+
+        # Extract name from entity_id (format: usaspending:recipient:NAME)
+        name = entity_id.replace("usaspending:", "").replace("recipient:", "")
+        if not name:
+            return []
 
         connections = []
         async with make_httpx_client() as client:
             try:
-                entity = await self.get_entity(entity_id)
-                if not entity:
-                    return connections
-
                 resp = await client.post(
                     f"{BASE_URL}/search/spending_by_award/",
                     json={
                         "filters": {
-                            "recipient_search_text": [entity.name],
-                            "time_period": [{"start_date": "2020-01-01", "end_date": "2026-12-31"}],
+                            "recipient_search_text": [name],
+                            "award_type_codes": ["A", "B", "C", "D"],
                         },
                         "fields": ["Award ID", "Awarding Agency", "Award Amount", "Award Type", "Description"],
                         "limit": 20,
@@ -174,8 +174,8 @@ class USASpendingSource(BaseSource):
         return connections
 
     async def get_events(self, entity_id: str) -> list[TimelineEvent]:
-        entity = await self.get_entity(entity_id)
-        if not entity:
+        name = entity_id.replace("usaspending:", "").replace("recipient:", "")
+        if not name:
             return []
 
         from config import make_httpx_client
@@ -186,8 +186,8 @@ class USASpendingSource(BaseSource):
                     f"{BASE_URL}/search/spending_by_award/",
                     json={
                         "filters": {
-                            "recipient_search_text": [entity.name],
-                            "time_period": [{"start_date": "2020-01-01", "end_date": "2026-12-31"}],
+                            "recipient_search_text": [name],
+                            "award_type_codes": ["A", "B", "C", "D"],
                         },
                         "fields": ["Award ID", "Awarding Agency", "Award Amount", "Start Date", "Award Type"],
                         "limit": 20,
@@ -207,7 +207,7 @@ class USASpendingSource(BaseSource):
                             events.append(TimelineEvent(
                                 date=dt,
                                 event_type="award",
-                                description=f"{entity.name}: {result.get('Award Type', 'award')} from {result.get('Awarding Agency', '')}",
+                                description=f"{name}: {result.get('Award Type', 'award')} from {result.get('Awarding Agency', '')}",
                                 entity_ids=[entity_id],
                                 source=SourceEnum.usaspending,
                                 amount=result.get("Award Amount"),

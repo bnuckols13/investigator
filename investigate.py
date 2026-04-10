@@ -98,18 +98,33 @@ async def run_search(
         conn_tasks = []
         event_tasks = []
         for ent in top_entities:
-            for source in all_sources:
-                conn_tasks.append(source.get_connections(ent.id))
-                event_tasks.append(source.get_events(ent.id))
+            # Query the entity's own source (always works)
+            own_source = next((s for s in all_sources if s.name == ent.source.value), None)
+            if own_source:
+                conn_tasks.append(own_source.get_connections(ent.id))
+                event_tasks.append(own_source.get_events(ent.id))
+
+            # Also query USASpending for any entity (name-based search works cross-source)
+            usa_source = next((s for s in all_sources if s.name == "usaspending"), None)
+            if usa_source and ent.source.value != "usaspending":
+                # Create a usaspending-compatible ID from the entity name
+                usa_id = f"usaspending:recipient:{ent.name}"
+                conn_tasks.append(usa_source.get_connections(usa_id))
+                event_tasks.append(usa_source.get_events(usa_id))
+
+            # Also query OpenFEC for person entities (campaign finance cross-reference)
+            fec_source = next((s for s in all_sources if s.name == "openfec"), None)
+            if fec_source and ent.entity_type.value == "person" and ent.source.value != "openfec":
+                conn_tasks.append(fec_source.get_connections(f"fec:{ent.name}"))
 
         conn_results = await asyncio.gather(*conn_tasks, return_exceptions=True)
         event_results = await asyncio.gather(*event_tasks, return_exceptions=True)
 
         for r in conn_results:
-            if not isinstance(r, Exception):
+            if not isinstance(r, Exception) and r:
                 all_connections.extend(r)
         for r in event_results:
-            if not isinstance(r, Exception):
+            if not isinstance(r, Exception) and r:
                 all_events.extend(r)
 
         console.print(f"  [green]{len(all_connections)} connections, {len(all_events)} timeline events[/green]")
