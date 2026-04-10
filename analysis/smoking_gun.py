@@ -782,6 +782,198 @@ class GhostContractorDetector(BaseDetector):
 
 # --- Tier 3: Indicators ---
 
+class SelfDealingDetector(BaseDetector):
+    """Detects nonprofit self-dealing: officer/director of nonprofit is also
+    connected to entities receiving payments or contracts from the nonprofit.
+
+    Pattern: Person → directorship at Nonprofit → Person also → directorship/ownership at Company
+    → Company receives contracts/payments
+
+    This is the pattern that dissolved the Trump Foundation.
+    """
+    name = "self_dealing"
+    display_name = "Nonprofit Self-Dealing"
+    tier = "smoking_gun"
+
+    def detect(self, ctx: DetectionContext) -> list[DetectedPattern]:
+        patterns = []
+
+        # Find all directorship connections (officer/director roles)
+        directorships: dict[str, list[str]] = {}  # person_id -> [org_ids]
+        for conn in ctx.connections:
+            if conn.relation_type == "directorship":
+                person_id = conn.source_entity_id
+                org_id = conn.target_entity_id
+                directorships.setdefault(person_id, []).append(org_id)
+
+        # For each person with multiple directorships, check if any pair
+        # involves a nonprofit + a contractor/vendor
+        for person_id, org_ids in directorships.items():
+            if len(org_ids) < 2:
+                continue
+
+            person = ctx.entity_index.get(person_id)
+            person_name = person.name if person else person_id.split(":")[-1]
+
+            # Separate nonprofits from other orgs
+            nonprofit_ids = []
+            other_ids = []
+            for oid in org_ids:
+                org = ctx.entity_index.get(oid)
+                if org and "nonprofit" in org.flags:
+                    nonprofit_ids.append(oid)
+                else:
+                    other_ids.append(oid)
+
+            if not nonprofit_ids:
+                continue
+
+            # Check if any non-nonprofit org has contract/funding connections
+            for np_id in nonprofit_ids:
+                np_ent = ctx.entity_index.get(np_id)
+                if not np_ent:
+                    continue
+
+                for other_id in other_ids:
+                    other_ent = ctx.entity_index.get(other_id)
+                    if not other_ent:
+                        continue
+
+                    # Check for financial connections between the nonprofit and the other org
+                    other_conns = ctx.get_connections_for(other_id)
+                    has_financial_link = any(
+                        c.relation_type in ("contract", "funding")
+                        and (c.source_entity_id == np_id or c.target_entity_id == np_id)
+                        for c in other_conns
+                    )
+
+                    # Also check via graph path
+                    has_path = False
+                    if np_id in ctx.graph and other_id in ctx.graph:
+                        try:
+                            has_path = nx.has_path(ctx.graph, np_id, other_id)
+                        except nx.NetworkXError:
+                            pass
+
+                    if has_financial_link or has_path:
+                        sources = ctx.sources_for_entity(person_id) | ctx.sources_for_entity(np_id) | ctx.sources_for_entity(other_id)
+                        mults = {
+                            "sources": source_independence_multiplier(sources),
+                            "recency": recency_multiplier(None),
+                        }
+                        final = compute_final_score(85, mults)
+
+                        patterns.append(DetectedPattern(
+                            pattern_name=self.name, display_name=self.display_name, tier=self.tier,
+                            raw_score=85, multipliers=mults, final_score=final,
+                            evidence=[
+                                PatternEvidence(
+                                    entity_id=person_id, entity_name=person_name,
+                                    evidence_type="connection",
+                                    description=f"Officer/director at nonprofit {np_ent.name} AND at {other_ent.name}",
+                                    source="propublica",
+                                ),
+                                PatternEvidence(
+                                    entity_id=np_id, entity_name=np_ent.name,
+                                    evidence_type="flag",
+                                    description="Nonprofit organization",
+                                    source=np_ent.source.value,
+                                ),
+                                PatternEvidence(
+                                    entity_id=other_id, entity_name=other_ent.name,
+                                    evidence_type="connection",
+                                    description=f"Connected entity (potential vendor/beneficiary)",
+                                    source=other_ent.source.value,
+                                ),
+                            ],
+                            entity_ids=[person_id, np_id, other_id],
+                            narrative=(
+                                f"{person_name} serves as an officer/director at {np_ent.name} (nonprofit) "
+                                f"while also connected to {other_ent.name}. Financial links exist between "
+                                f"these entities, suggesting potential self-dealing."
+                            ),
+                            next_steps=[
+                                f"Pull {np_ent.name}'s IRS 990 Schedule L (transactions with interested persons)",
+                                f"Check if {other_ent.name} received payments from {np_ent.name}",
+                                f"Verify {person_name}'s conflict-of-interest disclosures",
+                                "Search state AG charity division for complaints",
+                                f"FOIA {np_ent.name}'s board meeting minutes for recusal records",
+                            ],
+                        ))
+
+        # Also check: entities flagged as both nonprofit AND having high_exec_comp
+        # with connections to non-nonprofit entities
+        for entity in ctx.entities:
+            if "nonprofit" in entity.flags and "high_exec_comp" in entity.flags:
+                comp = entity.properties.get("officer_compensation", ["0"])[0]
+                revenue = entity.properties.get("total_revenue", ["0"])[0]
+                try:
+                    comp_val = int(float(comp))
+                    rev_val = int(float(revenue))
+                except (ValueError, TypeError):
+                    continue
+
+                if comp_val < 1_000_000:
+                    continue
+
+                # Check if any officers are connected to other entities
+                officer_conns = [
+                    c for c in ctx.get_connections_for(entity.id)
+                    if c.relation_type == "directorship"
+                ]
+                for oc in officer_conns:
+                    officer_id = oc.source_entity_id
+                    # Check if this officer connects to other entities
+                    officer_other_conns = [
+                        c for c in ctx.get_connections_for(officer_id)
+                        if c.target_entity_id != entity.id
+                    ]
+                    if officer_other_conns:
+                        other_ent = ctx.entity_index.get(officer_other_conns[0].target_entity_id)
+                        other_name = other_ent.name if other_ent else "unknown entity"
+
+                        sources = ctx.sources_for_entity(entity.id) | ctx.sources_for_entity(officer_id)
+                        mults = {"sources": source_independence_multiplier(sources)}
+                        final = compute_final_score(70, mults)
+
+                        patterns.append(DetectedPattern(
+                            pattern_name="nonprofit_officer_conflict",
+                            display_name="Nonprofit Officer Conflict of Interest",
+                            tier="strong",
+                            raw_score=70, multipliers=mults, final_score=final,
+                            evidence=[
+                                PatternEvidence(
+                                    entity_id=entity.id, entity_name=entity.name,
+                                    evidence_type="flag",
+                                    description=f"Nonprofit with ${comp_val:,} officer comp ({entity.properties.get('comp_ratio', [''])[0]} of revenue)",
+                                    source="propublica",
+                                    amount=float(comp_val),
+                                ),
+                                PatternEvidence(
+                                    entity_id=officer_id,
+                                    entity_name=officer_id.replace("propublica:officer:", ""),
+                                    evidence_type="connection",
+                                    description=f"Officer also connected to {other_name}",
+                                    source="propublica",
+                                ),
+                            ],
+                            entity_ids=[entity.id, officer_id],
+                            narrative=(
+                                f"{entity.name} pays ${comp_val:,} in officer compensation "
+                                f"({entity.properties.get('comp_ratio', [''])[0]} of revenue). "
+                                f"Officers are connected to external entities, warranting conflict-of-interest review."
+                            ),
+                            next_steps=[
+                                f"Pull {entity.name}'s 990 Part VII for individual officer compensation",
+                                "Compare officer comp to industry benchmarks",
+                                "Check for related-party transactions on Schedule L",
+                                "Review state AG charity filings for governance complaints",
+                            ],
+                        ))
+                        break  # One pattern per nonprofit
+        return patterns
+
+
 class JurisdictionAnomalyDetector(BaseDetector):
     name = "jurisdiction_anomaly"
     display_name = "Jurisdiction Anomaly"
@@ -967,6 +1159,7 @@ ALL_DETECTORS: list[type[BaseDetector]] = [
     QuidProQuoDetector,
     InsiderTradingSignalDetector,
     RevolvingDoorContractDetector,
+    SelfDealingDetector,
     # Tier 2
     ConcurrentContradictionDetector,
     ShellCompanyObfuscationDetector,

@@ -32,6 +32,14 @@ class ProPublicaSource(BaseSource):
 
         entities = []
         async with make_httpx_client() as client:
+            # Check if query looks like an EIN (XX-XXXXXXX or XXXXXXXXX)
+            clean_query = query.replace("-", "").strip()
+            if clean_query.isdigit() and len(clean_query) in (8, 9):
+                ein = clean_query
+                detailed = await self.get_entity(f"propublica:{ein}")
+                if detailed:
+                    return [detailed]
+
             try:
                 resp = await client.get(
                     f"{BASE_URL}/search.json",
@@ -40,8 +48,33 @@ class ProPublicaSource(BaseSource):
                 resp.raise_for_status()
                 data = resp.json()
 
-                for org in data.get("organizations", [])[:limit]:
+                # If no results, try variant searches
+                orgs = data.get("organizations", [])
+                if not orgs and " " in query:
+                    # Try with "The" prefix (common for foundations)
+                    for variant in [f"The {query}", query.replace("Foundation", "").strip()]:
+                        resp2 = await client.get(
+                            f"{BASE_URL}/search.json",
+                            params={"q": variant, "page": 0},
+                        )
+                        if resp2.status_code == 200:
+                            orgs = resp2.json().get("organizations", [])
+                            if orgs:
+                                break
+
+                for org in orgs[:limit]:
                     ein = org.get("ein", "")
+                    if not ein:
+                        continue
+
+                    # Auto-pull full 990 detail for top results (first 5)
+                    if len(entities) < 5:
+                        detailed = await self.get_entity(f"propublica:{ein}")
+                        if detailed:
+                            entities.append(detailed)
+                            continue
+
+                    # Fallback: lightweight entry for remaining results
                     name = org.get("name", "Unknown")
                     sub_name = org.get("sub_name", "")
                     display_name = sub_name if sub_name else name
@@ -138,9 +171,9 @@ class ProPublicaSource(BaseSource):
                         "address": [org.get("address", "")],
                         "city": [org.get("city", "")],
                         "state": [org.get("state", "")],
-                        "ruling_date": [str(org.get("ruling_date", ""))],
-                        "subsection_code": [str(org.get("subsection_code", ""))],
-                        "ntee_code": [org.get("ntee_code", "")],
+                        "ruling_date": [str(org.get("ruling_date") or "")],
+                        "subsection_code": [str(org.get("subsection_code") or "")],
+                        "ntee_code": [str(org.get("ntee_code") or "")],
                         "total_revenue": [str(revenue)],
                         "total_expenses": [str(expenses)],
                         "total_assets": [str(assets)],
@@ -213,14 +246,14 @@ class ProPublicaSource(BaseSource):
                                     source=SourceEnum.propublica,
                                 ))
 
-                # Also create financial flow connections
+                # Also create financial flow connections (NOT typed as "contract" — these are 990 revenue figures)
                 org = data.get("organization", {})
                 revenue = latest.get("totrevenue", 0)
                 if revenue and revenue > 0:
                     connections.append(Connection(
                         source_entity_id="propublica:revenue",
                         target_entity_id=entity_id,
-                        relation_type="contract",
+                        relation_type="funding",
                         label=f"Total revenue: ${revenue:,.0f}",
                         weight=revenue,
                         source=SourceEnum.propublica,
