@@ -1,0 +1,13 @@
+{
+  "patterns": [],
+  "heat_score": 0.0,
+  "scan_summary": {
+    "entities_scanned": 4,
+    "patterns_tested": 13,
+    "patterns_fired": 0,
+    "sources_represented": [
+      "courtlistener"
+    ]
+  },
+  "top_narrative": ""
+}

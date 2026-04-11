@@ -1,0 +1,50 @@
+{
+  "name": "opioid settlement fund nonprofits",
+  "slug": "opioid-settlement-fund-nonprofits",
+  "created": "2026-04-10T19:51:22.376287",
+  "updated": "2026-04-10T19:52:44.762060",
+  "searches": [
+    {
+      "query": "opioid settlement fund nonprofits",
+      "timestamp": "2026-04-10T19:51:26.438668",
+      "new_entities": 20,
+      "new_connections": 0
+    },
+    {
+      "query": "OneOhio Recovery Foundation opioid",
+      "timestamp": "2026-04-10T19:51:58.727793",
+      "new_entities": 1,
+      "new_connections": 0
+    },
+    {
+      "query": "opioid abatement treatment nonprofit SAMHSA grant",
+      "timestamp": "2026-04-10T19:52:07.310506",
+      "new_entities": 10,
+      "new_connections": 2
+    },
+    {
+      "query": "opioid settlement fund fraud misuse",
+      "timestamp": "2026-04-10T19:52:11.644325",
+      "new_entities": 17,
+      "new_connections": 0
+    },
+    {
+      "query": "McKinsey Company opioid consulting",
+      "timestamp": "2026-04-10T19:52:40.654837",
+      "new_entities": 9,
+      "new_connections": 0
+    },
+    {
+      "query": "opioid recovery foundation abatement council nonprofit 501c3",
+      "timestamp": "2026-04-10T19:52:44.762052",
+      "new_entities": 3,
+      "new_connections": 0
+    }
+  ],
+  "entity_count": 60,
+  "connection_count": 2,
+  "flags_found": [
+    "litigated"
+  ],
+  "status": "active"
+}

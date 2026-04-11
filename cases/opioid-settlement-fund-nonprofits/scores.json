@@ -1,0 +1,78 @@
+[
+  {
+    "entity_id": "court:8112008",
+    "entity_name": "United States v. BOWERS",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [
+      "litigated"
+    ],
+    "explanation": "United States v. BOWERS: No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "court:16758858",
+    "entity_name": "City of Huntington, West Virginia v. AmerisourceBergen Drug Corporation",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [
+      "litigated"
+    ],
+    "explanation": "City of Huntington, West Virginia v. AmerisourceBergen Drug Corporation: No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "court:72060401",
+    "entity_name": "Flipcause, Inc.",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [
+      "litigated"
+    ],
+    "explanation": "Flipcause, Inc.: No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "court:6240169",
+    "entity_name": "In Re: National Prescription Opiate Litigation",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [
+      "litigated"
+    ],
+    "explanation": "In Re: National Prescription Opiate Litigation: No significant investigative indicators detected."
+  }
+]

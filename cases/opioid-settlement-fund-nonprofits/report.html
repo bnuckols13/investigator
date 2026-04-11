@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Investigation: opioid settlement fund nonprofits</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+        .container { max-width: 960px; margin: 0 auto; padding: 2.5rem 2rem; }
+        code { font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace; font-size: 0.8rem; }
+
+        /* Section labels */
+        .section-label {
+            font-size: 0.7rem; font-weight: 600; letter-spacing: 0.15em;
+            color: #64748b; margin-bottom: 1rem; text-transform: uppercase;
+        }
+        .section-desc { color: #94a3b8; font-size: 0.85rem; margin-bottom: 1rem; }
+        section { margin-bottom: 3rem; }
+
+        /* Header */
+        header { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid #1e293b; }
+        .brand { font-size: 0.65rem; letter-spacing: 0.2em; color: #475569; text-transform: uppercase; margin-bottom: 0.5rem; }
+        header h1 { font-size: 2rem; font-weight: 700; color: #f8fafc; line-height: 1.2; margin-bottom: 0.5rem; }
+        .header-meta { font-size: 0.8rem; color: #64748b; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .header-meta code { color: #94a3b8; }
+        .sep { color: #334155; }
+        .src-row { margin-top: 0.75rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .src-pill {
+            font-size: 0.7rem; padding: 2px 8px; border-radius: 4px;
+            border: 1px solid; background: transparent; color: #cbd5e1;
+        }
+        .src-fail { opacity: 0.4; text-decoration: line-through; }
+
+        /* Lede */
+        .lede-section { display: flex; gap: 1.5rem; align-items: flex-start; margin-bottom: 2.5rem; }
+        .heat-inline {
+            flex-shrink: 0; width: 80px; height: 80px; border-radius: 50%;
+            border: 3px solid; display: flex; flex-direction: column;
+            align-items: center; justify-content: center;
+        }
+        .heat-num { font-size: 1.8rem; font-weight: 700; line-height: 1; }
+        .heat-word { font-size: 0.6rem; letter-spacing: 0.1em; font-weight: 600; }
+        .lede-body { flex: 1; }
+        .lede-text { font-size: 1.15rem; color: #f1f5f9; line-height: 1.6; margin-bottom: 0.5rem; }
+        .lede-sub { font-size: 0.85rem; color: #94a3b8; }
+
+        /* SBI / Pre-Registration */
+        .sbi-card { border-left: 3px solid #7c3aed; }
+        .sbi-hash { font-size: 0.75rem; color: #a78bfa; margin-bottom: 0.5rem; }
+        .sbi-date { color: #64748b; margin-left: 0.5rem; }
+        .sbi-note { font-size: 0.75rem; color: #64748b; font-style: italic; margin-bottom: 1rem; }
+        .sbi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .sbi-block { margin-bottom: 0.75rem; }
+        .sbi-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; color: #a78bfa; text-transform: uppercase; margin-bottom: 0.25rem; }
+        .sbi-card blockquote { border-left: 2px solid #7c3aed; padding-left: 0.75rem; color: #cbd5e1; font-size: 0.9rem; }
+
+        /* Cards */
+        .card { background: #1e293b; border-radius: 8px; padding: 1.5rem; margin-bottom: 1rem; }
+
+        /* Clean result card */
+        .clean-card { text-align: center; padding: 2.5rem; }
+        .clean-icon { font-size: 2rem; color: #22c55e; margin-bottom: 0.75rem; }
+        .clean-text { font-size: 1.1rem; color: #f1f5f9; margin-bottom: 0.5rem; }
+        .clean-sub { font-size: 0.85rem; color: #94a3b8; max-width: 600px; margin: 0 auto; }
+
+        /* Finding cards */
+        .finding-card { border-left: 3px solid #475569; }
+        .finding-card:has(.tier-sg) { border-left-color: #ef4444; }
+        .finding-card:has(.tier-strong) { border-left-color: #f59e0b; }
+        .finding-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+        .tier-sg { background: #ef4444; color: #fff; padding: 2px 10px; border-radius: 3px; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.05em; }
+        .tier-strong { background: #f59e0b; color: #000; padding: 2px 10px; border-radius: 3px; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.05em; }
+        .tier-ind { background: #334155; color: #cbd5e1; padding: 2px 10px; border-radius: 3px; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.05em; }
+        .finding-score { margin-left: auto; font-size: 1.5rem; font-weight: 700; color: #f59e0b; }
+        .finding-name { font-size: 1.1rem; color: #f1f5f9; margin-bottom: 0.25rem; }
+        .finding-confidence { font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.15rem; }
+        .finding-mhees { margin-bottom: 0.75rem; }
+        .finding-mhees code { color: #64748b; font-size: 0.75rem; }
+        .finding-narrative { color: #cbd5e1; margin-bottom: 1rem; }
+
+        /* Evidence chain */
+        .evidence-chain { margin-bottom: 1rem; }
+        .ev-item { padding: 0.4rem 0; border-bottom: 1px solid #1e293b; font-size: 0.85rem; color: #cbd5e1; }
+        .ev-src { font-size: 0.7rem; padding: 1px 6px; border-radius: 3px; border: 1px solid; color: #94a3b8; margin-right: 0.5rem; }
+        .ev-amount { color: #f59e0b; font-weight: 600; }
+        .ev-date { color: #64748b; font-size: 0.8rem; }
+
+        /* Multiplier bars */
+        .mult-group { margin-bottom: 1rem; }
+        .mult-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem; font-size: 0.8rem; }
+        .mult-name { width: 100px; color: #94a3b8; text-align: right; }
+        .mult-bar { flex: 1; height: 6px; background: #1e293b; border-radius: 3px; max-width: 200px; }
+        .mult-fill { height: 100%; background: #3b82f6; border-radius: 3px; }
+        .mult-val { color: #64748b; width: 40px; }
+
+        /* Next steps */
+        .next-steps { border-top: 1px solid #334155; padding-top: 0.75rem; }
+        .steps-label { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em; color: #64748b; margin-bottom: 0.5rem; }
+        .next-steps ul { padding-left: 1.25rem; }
+        .next-steps li { font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.25rem; }
+
+        /* Detector grid */
+        .det-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.4rem; }
+        .det-cell { font-size: 0.8rem; padding: 0.4rem 0.6rem; border-radius: 4px; background: #1e293b; }
+        .det-icon { margin-right: 0.3rem; }
+        .det-fired { color: #f59e0b; }
+        .det-clear { color: #475569; }
+
+        /* Network */
+        .net-container { background: #0f172a; border-radius: 12px; overflow: hidden; margin-bottom: 0.75rem; }
+        .net-legend { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.75rem; color: #94a3b8; margin-bottom: 0.5rem; }
+        .leg-item { display: flex; align-items: center; gap: 0.3rem; }
+        .leg-circ { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+        .leg-rect { width: 12px; height: 8px; border-radius: 2px; display: inline-block; }
+        .leg-hex { width: 10px; height: 10px; border-radius: 2px; transform: rotate(45deg); display: inline-block; }
+        .net-metrics { font-size: 0.8rem; color: #64748b; }
+
+        /* Entity table */
+        .ent-table { width: 100%; border-collapse: collapse; }
+        .ent-table th { text-align: left; padding: 8px 10px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; color: #64748b; text-transform: uppercase; border-bottom: 1px solid #1e293b; }
+        .ent-table td { padding: 8px 10px; border-bottom: 1px solid #1e293b; }
+        .ent-table tr:hover { background: #1e293b; }
+        .rank { color: #475569; font-size: 0.8rem; }
+        .ent-name { color: #f1f5f9; display: block; }
+        .ent-type { font-size: 0.75rem; color: #64748b; }
+        .tier-dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; margin-right: 0.4rem; }
+        .sc-high { color: #ef4444; font-weight: 700; }
+        .sc-mid { color: #f59e0b; }
+        .sc-low { color: #22c55e; }
+        .flag-pill { font-size: 0.65rem; padding: 1px 6px; border-radius: 3px; background: #1e293b; border: 1px solid #334155; color: #94a3b8; margin-right: 0.3rem; display: inline-block; margin-bottom: 0.2rem; }
+
+        /* Timeline */
+        .timeline { padding-left: 1rem; }
+        .tl-year { font-size: 0.8rem; font-weight: 600; color: #f1f5f9; margin: 1.25rem 0 0.5rem; padding-bottom: 0.25rem; border-bottom: 1px solid #1e293b; }
+        .tl-item { display: flex; gap: 0.75rem; padding: 0.4rem 0; position: relative; }
+        .tl-dot { width: 8px; height: 8px; border-radius: 50%; background: #334155; margin-top: 0.5rem; flex-shrink: 0; }
+        .tl-annotated .tl-dot { background: #f59e0b; }
+        .tl-content { flex: 1; }
+        .tl-date { font-size: 0.75rem; color: #64748b; margin-right: 0.5rem; }
+        .tl-desc { font-size: 0.85rem; color: #cbd5e1; }
+        .tl-more { font-size: 0.8rem; color: #475569; margin-top: 0.75rem; }
+
+        /* Cross-source */
+        .cs-card h3 { font-size: 1rem; color: #f1f5f9; margin-bottom: 0.5rem; }
+        .cs-match { padding: 0.3rem 0; font-size: 0.85rem; color: #cbd5e1; }
+        .cs-pct { color: #64748b; font-size: 0.8rem; margin-left: 0.3rem; }
+
+        /* Verification */
+        .verify-card { border-left: 3px solid #f59e0b; }
+        .checklist { display: flex; flex-direction: column; gap: 0.6rem; }
+        .checklist label { font-size: 0.85rem; display: flex; align-items: baseline; gap: 0.5rem; cursor: pointer; }
+        .checklist input { accent-color: #22c55e; margin-top: 0.15rem; }
+        .check-note { color: #64748b; font-size: 0.75rem; }
+
+        /* Methodology */
+        .methodology { border-top: 1px solid #1e293b; padding-top: 2rem; }
+        .meth-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+        .meth-block { margin-bottom: 1rem; }
+        .meth-block h3 { font-size: 0.85rem; color: #f1f5f9; margin-bottom: 0.5rem; }
+        .meth-table { width: 100%; font-size: 0.8rem; border-collapse: collapse; }
+        .meth-table th { text-align: left; padding: 4px 8px; color: #64748b; font-size: 0.7rem; border-bottom: 1px solid #1e293b; }
+        .meth-table td { padding: 4px 8px; border-bottom: 1px solid #1e293b; color: #cbd5e1; }
+        .meth-ok { color: #22c55e; }
+        .meth-fail { color: #ef4444; }
+        .meth-note { font-size: 0.75rem; color: #64748b; margin-top: 0.5rem; }
+        .meth-desc { font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.5rem; }
+        .mhees-mini { display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.75rem; color: #94a3b8; }
+        .mhees-mini strong { color: #cbd5e1; }
+        .meth-footer { font-size: 0.75rem; color: #475569; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #1e293b; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { padding: 1.5rem 1rem; }
+            .lede-section { flex-direction: column; align-items: center; text-align: center; }
+            .meth-grid { grid-template-columns: 1fr; }
+            .sbi-grid { grid-template-columns: 1fr; }
+            .det-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <div class="brand">HESITATION MEDIA / MEMORY HOLE</div>
+            <h1>opioid settlement fund nonprofits</h1>
+            <div class="header-meta">
+                <span>2026-04-10</span>
+                <span class="sep">|</span>
+                <span>3.4s across 6 sources</span>
+                <span class="sep">|</span>
+                <span>v.<code>f2691f82</code></span>
+            </div>
+            <div class="src-row"><span class="src-pill src-fail" style="border-color:#22c55e">opensanctions</span><span class="src-pill src-ok" style="border-color:#3b82f6">sec_edgar</span><span class="src-pill src-ok" style="border-color:#94a3b8">openfec</span><span class="src-pill src-ok" style="border-color:#94a3b8">usaspending</span><span class="src-pill src-ok" style="border-color:#3b82f6">courtlistener</span><span class="src-pill src-ok" style="border-color:#3b82f6">propublica</span></div>
+        </header>
+
+        <section class="lede-section">
+            
+        <div class="heat-inline" style="border-color:#22c55e">
+            <span class="heat-num" style="color:#22c55e">0</span>
+            <span class="heat-word" style="color:#22c55e">LOW</span>
+        </div>
+            <div class="lede-body">
+                <p class="lede-text">Analysis of 4 entities across 5 databases found no anomalous patterns.</p>
+                <p class="lede-sub">All 13 composite detectors were tested. 0 connections and 0 timeline events were examined. This is a clean result within the scope of available public data.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-label">KEY FINDINGS</div>
+            <div class="card clean-card">
+                <div class="clean-icon">&#10003;</div>
+                <p class="clean-text">No anomalous patterns detected in available data.</p>
+                <p class="clean-sub">All 13 composite detectors were tested against the entity network, connections, and timeline. None exceeded the firing threshold. This does not prove absence of wrongdoing; it means the publicly available data examined here does not surface the patterns these detectors target.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-label">ANALYSIS COVERAGE</div>
+            <div class="det-grid"><div class="det-cell det-clear"><span class="det-icon">&#9675;</span> Sanctions Evasion Chain</div><div class="det-cell det-clear"><span class="det-icon">&#9675;</span> Quid Pro Quo</div><div class="det-cell det-clear"><span class="det-icon">&#9675;</span> Insider Trading Signal</div><div class="det-cell det-clear"><span class="det-icon">&#9675;</span> Revolving Door Contract</div><div class="det-cell det-clear"><span class="det-icon">&#9675;</span> Self-Dealing</div><div class="det-cell det-clear"><span class="det-icon">&#9675;</span> Concurrent Contradiction</div><div class="det-cell det-clear"><span class="det-icon">&#9675;</span> Shell Company Obfuscation</div><div class="det-cell det-clear"><span class="det-icon">&#9675;</span> Threshold Gaming</div><div class="det-cell det-clear"><span class="det-icon">&#9675;</span> Ghost Contractor</div><div class="det-cell det-clear"><span class="det-icon">&#9675;</span> Jurisdiction Anomaly</div><div class="det-cell det-clear"><span class="det-icon">&#9675;</span> Network Bridge</div><div class="det-cell det-clear"><span class="det-icon">&#9675;</span> Temporal Clustering</div><div class="det-cell det-clear"><span class="det-icon">&#9675;</span> Financial Outlier</div></div>
+        </section>
+
+        <section>
+            <div class="section-label">NETWORK</div>
+            <div class="net-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" style="width:100%;max-width:880px;height:auto;background:#0f172a;border-radius:12px;">
+<defs>
+  <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+    <path d="M0,0 L8,3 L0,6" fill="#475569"/>
+  </marker>
+</defs>
+<style>
+  .node-label { font: 11px -apple-system, sans-serif; fill: #e2e8f0; pointer-events: none; }
+  .edge-label { font: 9px -apple-system, sans-serif; fill: #64748b; }
+  .node-shape { transition: opacity 0.2s; cursor: default; }
+  .node-shape:hover { opacity: 0.8; }
+</style>
+<rect x="537.3" y="406.0" width="40" height="28" rx="4" fill="#94a3b8" fill-opacity="0.2" stroke="#334155" stroke-width="1.5" class="node-shape"><title>United States v. BOWERS (unknown) [litigated]</title></rect>
+<text x="557.3" y="450.0" class="node-label" text-anchor="middle">United States v. BOWERS</text>
+<rect x="800.0" y="175.3" width="40" height="28" rx="4" fill="#94a3b8" fill-opacity="0.2" stroke="#334155" stroke-width="1.5" class="node-shape"><title>City of Huntington, West Virgi (unknown) [litigated]</title></rect>
+<text x="820.0" y="219.3" class="node-label" text-anchor="middle">City of Huntington, West Virgi</text>
+<rect x="277.1" y="46.0" width="40" height="28" rx="4" fill="#94a3b8" fill-opacity="0.2" stroke="#334155" stroke-width="1.5" class="node-shape"><title>Flipcause, Inc. (unknown) [litigated]</title></rect>
+<text x="297.1" y="90.0" class="node-label" text-anchor="middle">Flipcause, Inc.</text>
+<rect x="40.0" y="294.8" width="40" height="28" rx="4" fill="#94a3b8" fill-opacity="0.2" stroke="#334155" stroke-width="1.5" class="node-shape"><title>In Re: National Prescription O (unknown) [litigated]</title></rect>
+<text x="60.0" y="338.8" class="node-label" text-anchor="middle">In Re: National Prescription O</text>
+</svg>
+            </div>
+            <div class="net-legend"><span class="leg-item"><span class="leg-circ" style="background:#60a5fa"></span>Person</span><span class="leg-item"><span class="leg-rect" style="background:#34d399"></span>Company</span><span class="leg-item"><span class="leg-hex" style="background:#f472b6"></span>Organization</span><span class="leg-item"><span class="leg-circ" style="border:2px solid #fbbf24;background:transparent"></span>Flagged</span></div>
+            <div class="net-metrics">4 nodes, 0 edges, 4 components</div>
+        </section>
+
+        <section>
+            <div class="section-label">ENTITIES</div>
+            <table class="ent-table">
+                <thead><tr><th></th><th>Entity</th><th>Source</th><th>Score</th><th>Flags</th></tr></thead>
+                <tbody><tr>
+            <td class="rank">1</td>
+            <td><span class="ent-name">United States v. BOWERS</span><span class="ent-type">unknown</span></td>
+            <td><span class="tier-dot" style="background:#3b82f6"></span>courtlistener</td>
+            <td class="sc-low">0</td>
+            <td><span class="flag-pill">litigated</span></td>
+        </tr><tr>
+            <td class="rank">2</td>
+            <td><span class="ent-name">City of Huntington, West Virginia v. AmerisourceBergen Drug Corporation</span><span class="ent-type">unknown</span></td>
+            <td><span class="tier-dot" style="background:#3b82f6"></span>courtlistener</td>
+            <td class="sc-low">0</td>
+            <td><span class="flag-pill">litigated</span></td>
+        </tr><tr>
+            <td class="rank">3</td>
+            <td><span class="ent-name">Flipcause, Inc.</span><span class="ent-type">unknown</span></td>
+            <td><span class="tier-dot" style="background:#3b82f6"></span>courtlistener</td>
+            <td class="sc-low">0</td>
+            <td><span class="flag-pill">litigated</span></td>
+        </tr><tr>
+            <td class="rank">4</td>
+            <td><span class="ent-name">In Re: National Prescription Opiate Litigation</span><span class="ent-type">unknown</span></td>
+            <td><span class="tier-dot" style="background:#3b82f6"></span>courtlistener</td>
+            <td class="sc-low">0</td>
+            <td><span class="flag-pill">litigated</span></td>
+        </tr></tbody>
+            </table>
+        </section>
+
+        <section class="card verify-card">
+            <div class="section-label">PRE-PUBLICATION CHECKLIST</div>
+            <div class="checklist">
+                <label><input type="checkbox"> <strong>Cross-reference</strong> Findings corroborated in 2+ independent sources <span class="check-note">(0 found)</span></label>
+                <label><input type="checkbox"> <strong>Identity verified</strong> Confirmed correct entity via dates, locations, middle names</label>
+                <label><input type="checkbox"> <strong>Date currency</strong> Information is current (sanctions, directorships change)</label>
+                <label><input type="checkbox"> <strong>Primary documents</strong> Original filings, dockets, or contracts obtained</label>
+                <label><input type="checkbox"> <strong>Comment sought</strong> Subject contacted for response</label>
+            </div>
+        </section>
+
+        <section class="methodology">
+            <div class="section-label">HOW THIS REPORT WAS MADE</div>
+
+            <div class="meth-grid">
+                <div class="meth-block">
+                    <h3>Sources Queried</h3>
+                    <table class="meth-table">
+                        <thead><tr><th>Source</th><th>Tier</th><th>Status</th></tr></thead>
+                        <tbody><tr><td><span class="tier-dot" style="background:#22c55e"></span>opensanctions</td><td>Tier 1</td><td class="meth-fail">Failed</td></tr><tr><td><span class="tier-dot" style="background:#3b82f6"></span>sec_edgar</td><td>Tier 2</td><td class="meth-ok">Active</td></tr><tr><td><span class="tier-dot" style="background:#94a3b8"></span>openfec</td><td>Tier 3</td><td class="meth-ok">Active</td></tr><tr><td><span class="tier-dot" style="background:#94a3b8"></span>usaspending</td><td>Tier 3</td><td class="meth-ok">Active</td></tr><tr><td><span class="tier-dot" style="background:#3b82f6"></span>courtlistener</td><td>Tier 2</td><td class="meth-ok">Active</td></tr><tr><td><span class="tier-dot" style="background:#3b82f6"></span>propublica</td><td>Tier 2</td><td class="meth-ok">Active</td></tr></tbody>
+                    </table>
+                    <p class="meth-note">Tier 1: Primary documents, government lists. Tier 2: Regulatory filings, court records. Tier 3: Self-reported or aggregated data.</p>
+                </div>
+
+                <div class="meth-block">
+                    <h3>MHEES Evidence Evaluation</h3>
+                    <p class="meth-desc">Every finding carries a six-axis code: <code>P-R&#8224;-C-I&#8224;-D-F</code>. Axes marked &#8224; require written justification before publication.</p>
+                    <div class="mhees-mini">
+                        <span><strong>P</strong> Provenance</span>
+                        <span><strong>R&#8224;</strong> Reliability</span>
+                        <span><strong>C</strong> Corroboration</span>
+                        <span><strong>I&#8224;</strong> Credibility</span>
+                        <span><strong>D</strong> Inference</span>
+                        <span><strong>F</strong> Defeasibility</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="meth-block">
+                <h3>Forensic Provenance</h3>
+                <p class="meth-desc">27 API responses hashed (SHA-256) and cached at retrieval time. Chain of custody documents every API call from query to cache, ensuring evidence integrity for the Trustless Journalism Protocol.</p>
+            </div>
+
+            <div class="meth-footer">
+                Tool version <code>f2691f82f592</code> &middot; Investigator Toolkit (Hesitation Media / Memory Hole) &middot; Methodology: MHEES v0.2, Trustless Journalism Protocol &middot; Findings are leads, not conclusions.
+            </div>
+        </section>
+    </div>
+</body>
+</html>

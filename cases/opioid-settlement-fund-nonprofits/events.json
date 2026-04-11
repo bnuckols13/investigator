@@ -1,0 +1,57 @@
+[
+  {
+    "date": "2022-06-15",
+    "event_type": "award",
+    "description": "Purdue Pharma L.P.: None from Department of Defense",
+    "entity_ids": [
+      "usaspending:recipient:Purdue Pharma L.P."
+    ],
+    "source": "usaspending",
+    "source_url": null,
+    "amount": 58.0
+  },
+  {
+    "date": "2022-03-29",
+    "event_type": "award",
+    "description": "Purdue Pharma L.P.: None from Department of Defense",
+    "entity_ids": [
+      "usaspending:recipient:Purdue Pharma L.P."
+    ],
+    "source": "usaspending",
+    "source_url": null,
+    "amount": 169.5
+  },
+  {
+    "date": "2022-03-21",
+    "event_type": "award",
+    "description": "Purdue Pharma L.P.: None from Department of Defense",
+    "entity_ids": [
+      "usaspending:recipient:Purdue Pharma L.P."
+    ],
+    "source": "usaspending",
+    "source_url": null,
+    "amount": 678.0
+  },
+  {
+    "date": "2021-12-06",
+    "event_type": "award",
+    "description": "Purdue Pharma L.P.: None from Department of Defense",
+    "entity_ids": [
+      "usaspending:recipient:Purdue Pharma L.P."
+    ],
+    "source": "usaspending",
+    "source_url": null,
+    "amount": 339.0
+  },
+  {
+    "date": "2021-10-06",
+    "event_type": "award",
+    "description": "Purdue Pharma L.P.: None from Department of Defense",
+    "entity_ids": [
+      "usaspending:recipient:Purdue Pharma L.P."
+    ],
+    "source": "usaspending",
+    "source_url": null,
+    "amount": 113.0
+  }
+]

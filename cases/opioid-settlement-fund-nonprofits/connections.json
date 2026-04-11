@@ -1,0 +1,26 @@
+[
+  {
+    "source_entity_id": "usaspending:agency:Department of Defense",
+    "target_entity_id": "usaspending:recipient:Purdue Pharma L.P.",
+    "relation_type": "contract",
+    "label": "$53,802 (None)",
+    "weight": 53802.29,
+    "properties": {
+      "award_id": "SPE2D019F0062",
+      "description": "8506780873!OTHER MEDICAL"
+    },
+    "source": "usaspending"
+  },
+  {
+    "source_entity_id": "usaspending:agency:Department of Veterans Affairs",
+    "target_entity_id": "usaspending:recipient:Purdue Pharma L.P.",
+    "relation_type": "contract",
+    "label": "$23,742 (None)",
+    "weight": 23742.0,
+    "properties": {
+      "award_id": "V544A90078",
+      "description": "SMALL PURCHASE DATA"
+    },
+    "source": "usaspending"
+  }
+]
