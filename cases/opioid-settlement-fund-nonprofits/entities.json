@@ -1772,5 +1772,1719 @@
     "flags": [
       "litigated"
     ]
+  },
+  {
+    "id": "court:16301595",
+    "source": "courtlistener",
+    "name": "Tena Gayle McKinsey",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "16301595"
+      ],
+      "court": [
+        "United States Bankruptcy Court, E.D. Texas"
+      ],
+      "date_filed": [
+        "2019-10-07"
+      ],
+      "parties": [
+        "Tena Gayle McKinsey"
+      ],
+      "docket_number": [
+        "19-42771"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/16301595/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "court:6524718",
+    "source": "courtlistener",
+    "name": "Alix v. McKinsey & Co., Inc.",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "6524718"
+      ],
+      "court": [
+        "District Court, S.D. New York"
+      ],
+      "date_filed": [
+        "2018-05-09"
+      ],
+      "parties": [
+        "Alix",
+        "McKinsey & Co., Inc."
+      ],
+      "docket_number": [
+        "1:18-cv-04141"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/6524718/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "sec:['000-54546']",
+    "source": "sec_edgar",
+    "name": "Ameri Metro, Inc. (formerly Yellowwood)  (CIK 0001534155)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2020-11-12"
+      ],
+      "cik": [
+        "0001534155"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-05397']",
+    "source": "sec_edgar",
+    "name": "AUTOMATIC DATA PROCESSING INC  (ADP)  (CIK 0000008670)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2002-09-16"
+      ],
+      "cik": [
+        "0000008670"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-39744']",
+    "source": "sec_edgar",
+    "name": "C3.ai, Inc.  (AI)  (CIK 0001577526)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2025-06-23"
+      ],
+      "cik": [
+        "0001577526"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['000-24799']",
+    "source": "sec_edgar",
+    "name": "CORPORATE EXECUTIVE BOARD CO  (CIK 0001066104)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2003-02-28"
+      ],
+      "cik": [
+        "0001066104"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['000-53463']",
+    "source": "sec_edgar",
+    "name": "COVENANT GROUP OF CHINA INC  (CIK 0001410725)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2011-04-15"
+      ],
+      "cik": [
+        "0001410725"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-40932']",
+    "source": "sec_edgar",
+    "name": "Cyngn Inc.  (CYN)  (CIK 0001874097)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2023-03-17"
+      ],
+      "cik": [
+        "0001874097"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['000-52838']",
+    "source": "sec_edgar",
+    "name": "Digital Brand Media & Marketing Group, Inc.  (DBMM)  (CIK 0001127475)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2024-11-29"
+      ],
+      "cik": [
+        "0001127475"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "court:opinion:4534568",
+    "source": "courtlistener",
+    "name": "Federal Trade Commission v. Tronox Limited",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "court": [
+        "District Court, District of Columbia"
+      ],
+      "date_filed": [
+        "2018-09-12"
+      ],
+      "citation": []
+    },
+    "source_url": "https://www.courtlistener.com/opinion/4534568/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "sec:['000-27913']",
+    "source": "sec_edgar",
+    "name": "FREEMARKETS INC  (CIK 0000949968)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2001-02-23"
+      ],
+      "cik": [
+        "0000949968"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "court:opinion:6459944",
+    "source": "courtlistener",
+    "name": "in Re Allstate Vehicle and Property Insurance Company",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "court": [
+        "Texas Court of Appeals, 9th District (Beaumont)"
+      ],
+      "date_filed": [
+        "2022-04-14"
+      ],
+      "citation": []
+    },
+    "source_url": "https://www.courtlistener.com/opinion/6459944/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "court:66620880",
+    "source": "courtlistener",
+    "name": "Jill M. McKinsey",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "66620880"
+      ],
+      "court": [
+        "United States Bankruptcy Court, W.D. New York"
+      ],
+      "date_filed": [
+        "2009-03-25"
+      ],
+      "parties": [
+        "Jill M. McKinsey"
+      ],
+      "docket_number": [
+        "1-09-11155"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/66620880/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "sec:['001-42140']",
+    "source": "sec_edgar",
+    "name": "Lakeside Holding Ltd  (LSH)  (CIK 0001996192)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2024-09-30"
+      ],
+      "cik": [
+        "0001996192"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-38002']",
+    "source": "sec_edgar",
+    "name": "LAUREATE EDUCATION, INC.  (LAUR)  (CIK 0000912766)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2021-02-25"
+      ],
+      "cik": [
+        "0000912766"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "court:opinion:8339135",
+    "source": "courtlistener",
+    "name": "Mar-Bow Value Partners, LLC v. McKinsey Recovery & Transformation Services US, LLC",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "court": [
+        "District Court, E.D. Virginia"
+      ],
+      "date_filed": [
+        "2017-09-30"
+      ],
+      "citation": [
+        "578 B.R. 325"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/opinion/8339135/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "sec:['000-53851']",
+    "source": "sec_edgar",
+    "name": "MOBIVITY HOLDINGS CORP.  (MFON)  (CIK 0001447380)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2019-04-15"
+      ],
+      "cik": [
+        "0001447380"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-15147']",
+    "source": "sec_edgar",
+    "name": "OMNOVA SOLUTIONS INC  (CIK 0001090061)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2017-02-01"
+      ],
+      "cik": [
+        "0001090061"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['000-22065']",
+    "source": "sec_edgar",
+    "name": "RADIANT SYSTEMS INC  (CIK 0000845818)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2005-05-02"
+      ],
+      "cik": [
+        "0000845818"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "court:15458191",
+    "source": "courtlistener",
+    "name": "Sarah Luna McKinsey",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "15458191"
+      ],
+      "court": [
+        "United States Bankruptcy Court, N.D. Illinois"
+      ],
+      "date_filed": [
+        "2014-09-09"
+      ],
+      "parties": [
+        "Sarah Luna McKinsey"
+      ],
+      "docket_number": [
+        "14-32802"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/15458191/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "sec:['001-02313']",
+    "source": "sec_edgar",
+    "name": "SOUTHERN CALIFORNIA EDISON CO  (SCE-PG, SCE-PH, SCE-PJ, SCE-PK, SCE-PL, SCE-PM, SCE-PN)  (CIK 0000092103)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2003-03-31"
+      ],
+      "cik": [
+        "0000092103"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['333-168065']",
+    "source": "sec_edgar",
+    "name": "Tops Holding Corp  (CIK 0001483173)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2012-03-29"
+      ],
+      "cik": [
+        "0001483173"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-11609']",
+    "source": "sec_edgar",
+    "name": "TOYS R US INC  (CIK 0001005414)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2003-04-30"
+      ],
+      "cik": [
+        "0001005414"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-06880']",
+    "source": "sec_edgar",
+    "name": "US BANCORP \\DE\\  (USB, USB-PA, USB-PH, USB-PP, USB-PQ, USB-PR, USB-PS)  (CIK 0000036104)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2023-02-27"
+      ],
+      "cik": [
+        "0000036104"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-06991']",
+    "source": "sec_edgar",
+    "name": "WAL MART STORES INC  (WMT)  (CIK 0000104169)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2002-04-15"
+      ],
+      "cik": [
+        "0000104169"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company federal contracts&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "court:15776115",
+    "source": "courtlistener",
+    "name": "City of Vienna, West Virginia v. AmerisourceBergen Drug Corporation",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "15776115"
+      ],
+      "court": [
+        "District Court, S.D. West Virginia"
+      ],
+      "date_filed": [
+        "2019-01-17"
+      ],
+      "parties": [
+        "City of Vienna, West Virginia",
+        "AmerisourceBergen Drug Corporation"
+      ],
+      "docket_number": [
+        "2:19-cv-00052"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/15776115/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "sec:['001-37372']",
+    "source": "sec_edgar",
+    "name": "COLLEGIUM PHARMACEUTICAL, INC  (COLL)  (CIK 0001267565)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2017-03-10"
+      ],
+      "cik": [
+        "0001267565"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=West Virginia opioid settlement spending&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "court:59882297",
+    "source": "courtlistener",
+    "name": "The Board of Education of Mason County, West Virginia v. McKinsey & Company, Inc., United States",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "59882297"
+      ],
+      "court": [
+        "District Court, S.D. West Virginia"
+      ],
+      "date_filed": [
+        "2021-05-05"
+      ],
+      "parties": [
+        "The Board of Education of Mason County, West Virginia",
+        "McKinsey & Company, Inc., United States"
+      ],
+      "docket_number": [
+        "3:21-cv-00280"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/59882297/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "sec:['001-11373']",
+    "source": "sec_edgar",
+    "name": "CARDINAL HEALTH INC  (CAH)  (CIK 0000721371)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2022-08-11"
+      ],
+      "cik": [
+        "0000721371"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=West Virginia opioid settlement spending&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-00303']",
+    "source": "sec_edgar",
+    "name": "KROGER CO  (KR)  (CIK 0000056873)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2024-04-02"
+      ],
+      "cik": [
+        "0000056873"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=West Virginia opioid settlement spending&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-13252']",
+    "source": "sec_edgar",
+    "name": "MCKESSON CORP  (MCK)  (CIK 0000927653)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2022-05-09"
+      ],
+      "cik": [
+        "0000927653"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=West Virginia opioid settlement spending&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "court:65418210",
+    "source": "courtlistener",
+    "name": "Opioid Master Disbursement Trust II v. Barclays Capital, Inc.",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "65418210"
+      ],
+      "court": [
+        "United States Bankruptcy Court, D. Delaware"
+      ],
+      "date_filed": [
+        "2022-10-12"
+      ],
+      "parties": [
+        "Opioid Master Disbursement Trust II",
+        "Barclays Capital, Inc."
+      ],
+      "docket_number": [
+        "22-50435"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/65418210/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "court:opinion:2653628",
+    "source": "courtlistener",
+    "name": "STATE OF TENNESSEE v. JEFFREY M. FORGUSON",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "court": [
+        "Court of Criminal Appeals of Tennessee"
+      ],
+      "date_filed": [
+        "2014-02-18"
+      ],
+      "citation": []
+    },
+    "source_url": "https://www.courtlistener.com/opinion/2653628/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "court:67594532",
+    "source": "courtlistener",
+    "name": "Taylor v. Wexford Health Sources, Incorporated",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "67594532"
+      ],
+      "court": [
+        "District Court, S.D. West Virginia"
+      ],
+      "date_filed": [
+        "2023-07-07"
+      ],
+      "parties": [
+        "Taylor",
+        "Wexford Health Sources, Incorporated"
+      ],
+      "docket_number": [
+        "2:23-cv-00475"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/67594532/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "court:5567898",
+    "source": "courtlistener",
+    "name": "West Virginia Department of Health and Human Resources, Bureau for Medical Services v. Kathleen Sebelius",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "5567898"
+      ],
+      "court": [
+        "District Court, S.D. West Virginia"
+      ],
+      "date_filed": [
+        "2009-12-23"
+      ],
+      "parties": [
+        "West Virginia Department of Health and Human Resources, Bureau for Medical Services",
+        "Kathleen Sebelius"
+      ],
+      "docket_number": [
+        "2:09-cv-01542"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/5567898/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "court:opinion:8727366",
+    "source": "courtlistener",
+    "name": "United States v. Purdue Frederick Co.",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "court": [
+        "District Court, W.D. Virginia"
+      ],
+      "date_filed": [
+        "2013-08-05"
+      ],
+      "citation": [
+        "963 F. Supp. 2d 561"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/opinion/8727366/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "court:68182971",
+    "source": "courtlistener",
+    "name": "West Virginia University Hospitals Inc. v. AbbVie, Inc.",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "68182971"
+      ],
+      "court": [
+        "District Court, N.D. Ohio"
+      ],
+      "date_filed": [
+        "2024-01-22"
+      ],
+      "parties": [
+        "West Virginia University Hospitals Inc.",
+        "AbbVie, Inc."
+      ],
+      "docket_number": [
+        "1:24-op-45005"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/68182971/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "court:69010016",
+    "source": "courtlistener",
+    "name": "ASSOCIATION OF NEW JERSEY RIFLE & PISTOL CLUBS, INC. v. GREWAL",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "69010016"
+      ],
+      "court": [
+        "District Court, D. New Jersey"
+      ],
+      "date_filed": [
+        "2018-06-13"
+      ],
+      "parties": [
+        "ASSOCIATION OF NEW JERSEY RIFLE & PISTOL CLUBS, INC.",
+        "GREWAL"
+      ],
+      "docket_number": [
+        "1:18-cv-10507"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/69010016/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "court:65738623",
+    "source": "courtlistener",
+    "name": "Bayonne, New Jersey v. McKinsey & Company, Inc.",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "65738623"
+      ],
+      "court": [
+        "District Court, S.D. New York"
+      ],
+      "date_filed": [
+        "2022-11-07"
+      ],
+      "parties": [
+        "Bayonne, New Jersey",
+        "McKinsey & Company, Inc."
+      ],
+      "docket_number": [
+        "1:22-cv-09519"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/65738623/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "court:15788611",
+    "source": "courtlistener",
+    "name": "SUSSEX COUNTY, NEW JERSEY v. PURDUE PHARMA L.P.",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "15788611"
+      ],
+      "court": [
+        "District Court, D. New Jersey"
+      ],
+      "date_filed": [
+        "2019-06-14"
+      ],
+      "parties": [
+        "SUSSEX COUNTY, NEW JERSEY",
+        "PURDUE PHARMA L.P."
+      ],
+      "docket_number": [
+        "2:19-cv-13747"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/15788611/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "sec:['001-13111']",
+    "source": "sec_edgar",
+    "name": "DEPOMED INC  (CIK 0001005201)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2018-03-01"
+      ],
+      "cik": [
+        "0001005201"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=New Jersey opioid settlement fund&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "court:opinion:10655758",
+    "source": "courtlistener",
+    "name": "In Re: CVS Opioid Insurance Litigation",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "court": [
+        "Supreme Court of Delaware"
+      ],
+      "date_filed": [
+        "2025-08-18"
+      ],
+      "citation": []
+    },
+    "source_url": "https://www.courtlistener.com/opinion/10655758/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "sec:['001-35902']",
+    "source": "sec_edgar",
+    "name": "Insys Therapeutics, Inc.  (CIK 0001516479)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2019-03-13"
+      ],
+      "cik": [
+        "0001516479"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=New Jersey opioid settlement fund&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "court:4282429",
+    "source": "courtlistener",
+    "name": "New England Carpenters Health Benefits Fund v. First Databank, Inc.",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "4282429"
+      ],
+      "court": [
+        "District Court, D. Massachusetts"
+      ],
+      "date_filed": [
+        "2005-06-02"
+      ],
+      "parties": [
+        "New England Carpenters Health Benefits Fund",
+        "First Databank, Inc."
+      ],
+      "docket_number": [
+        "1:05-cv-11148"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/4282429/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "court:70147736",
+    "source": "courtlistener",
+    "name": "New Rite Aid, LLC",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "70147736"
+      ],
+      "court": [
+        "United States Bankruptcy Court, D. New Jersey"
+      ],
+      "date_filed": [
+        "2025-05-05"
+      ],
+      "parties": [
+        "New Rite Aid, LLC"
+      ],
+      "docket_number": [
+        "25-14861"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/70147736/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "sec:['001-35060']",
+    "source": "sec_edgar",
+    "name": "Pacira BioSciences, Inc.  (PCRX)  (CIK 0001396814)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2020-02-21"
+      ],
+      "cik": [
+        "0001396814"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=New Jersey opioid settlement fund&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['000-54001']",
+    "source": "sec_edgar",
+    "name": "PROTECT PHARMACEUTICAL Corp  (CIK 0001493526)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2011-03-31"
+      ],
+      "cik": [
+        "0001493526"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=New Jersey opioid settlement fund&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "court:18499114",
+    "source": "courtlistener",
+    "name": "The Diocese of Camden, New Jersey",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "18499114"
+      ],
+      "court": [
+        "United States Bankruptcy Court, D. New Jersey"
+      ],
+      "date_filed": [
+        "2020-10-01"
+      ],
+      "parties": [
+        "The Diocese of Camden, New Jersey"
+      ],
+      "docket_number": [
+        "20-21257"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/18499114/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "sec:['001-12657']",
+    "source": "sec_edgar",
+    "name": "ACTERNA CORP  (CIK 0000030841)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2003-07-29"
+      ],
+      "cik": [
+        "0000030841"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "court:61609559",
+    "source": "courtlistener",
+    "name": "Branch, County of v. McKinsey and Company, Inc.",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "docket_id": [
+        "61609559"
+      ],
+      "court": [
+        "District Court, W.D. Michigan"
+      ],
+      "date_filed": [
+        "2021-12-09"
+      ],
+      "parties": [
+        "Branch, County of",
+        "McKinsey and Company, Inc."
+      ],
+      "docket_number": [
+        "1:21-cv-01045"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/docket/61609559/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
+  },
+  {
+    "id": "sec:['001-39300']",
+    "source": "sec_edgar",
+    "name": "Ascena Retail Group, Inc.  (CIK 0001498301)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2020-12-14"
+      ],
+      "cik": [
+        "0001498301"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-36046']",
+    "source": "sec_edgar",
+    "name": "Axogen, Inc.  (AXGN)  (CIK 0000805928)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2019-04-30"
+      ],
+      "cik": [
+        "0000805928"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-05277']",
+    "source": "sec_edgar",
+    "name": "BEMIS CO INC  (CIK 0000011199)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2019-03-22"
+      ],
+      "cik": [
+        "0000011199"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-11064']",
+    "source": "sec_edgar",
+    "name": "BRITESMILE INC  (CIK 0000866734)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2002-04-29"
+      ],
+      "cik": [
+        "0000866734"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['000-49968']",
+    "source": "sec_edgar",
+    "name": "COMDISCO HOLDING CO INC  (CIK 0001179484)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2003-01-14"
+      ],
+      "cik": [
+        "0001179484"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-37587']",
+    "source": "sec_edgar",
+    "name": "CytomX Therapeutics, Inc.  (CTMX)  (CIK 0001501989)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2017-03-20"
+      ],
+      "cik": [
+        "0001501989"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['000-55175']",
+    "source": "sec_edgar",
+    "name": "EFH Group, Inc.  (CIK 0001565700)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2015-04-15"
+      ],
+      "cik": [
+        "0001565700"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['000-27572']",
+    "source": "sec_edgar",
+    "name": "ESC MEDICAL SYSTEMS LTD  (CIK 0001004945)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2001-04-30"
+      ],
+      "cik": [
+        "0001004945"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-14443']",
+    "source": "sec_edgar",
+    "name": "GARTNER INC  (IT)  (CIK 0000749251)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2017-03-07"
+      ],
+      "cik": [
+        "0000749251"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['000-30883']",
+    "source": "sec_edgar",
+    "name": "I MANY INC  (CIK 0001104017)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2002-04-30"
+      ],
+      "cik": [
+        "0001104017"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['001-35020']",
+    "source": "sec_edgar",
+    "name": "InfuSystem Holdings, Inc  (INFU)  (CIK 0001337013)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2012-04-30"
+      ],
+      "cik": [
+        "0001337013"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['000-26977']",
+    "source": "sec_edgar",
+    "name": "LUMINANT WORLDWIDE CORP  (CIK 0001087322)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2001-04-30"
+      ],
+      "cik": [
+        "0001087322"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['000-25857']",
+    "source": "sec_edgar",
+    "name": "PERSISTENCE SOFTWARE INC  (CIK 0001084400)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2004-04-29"
+      ],
+      "cik": [
+        "0001084400"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "sec:['000-25847']",
+    "source": "sec_edgar",
+    "name": "RAZORFISH INC  (CIK 0001075088)",
+    "entity_type": "company",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "form_type": [
+        ""
+      ],
+      "file_date": [
+        "2001-04-30"
+      ],
+      "cik": [
+        "0001075088"
+      ]
+    },
+    "source_url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&company=McKinsey Company Inc consulting&type=&dateb=&owner=include&count=40",
+    "last_seen": null,
+    "flags": []
+  },
+  {
+    "id": "court:opinion:4690435",
+    "source": "courtlistener",
+    "name": "WSA Group, PE-PC v. DKI Eng'g & Consulting USA PC",
+    "entity_type": "unknown",
+    "aliases": [],
+    "countries": [
+      "us"
+    ],
+    "properties": {
+      "court": [
+        "Appellate Division of the Supreme Court of the State of New York"
+      ],
+      "date_filed": [
+        "2019-12-26"
+      ],
+      "citation": [
+        "2019 NY Slip Op 9339"
+      ]
+    },
+    "source_url": "https://www.courtlistener.com/opinion/4690435/",
+    "last_seen": null,
+    "flags": [
+      "litigated"
+    ]
   }
 ]

@@ -1715,3 +1715,1262 @@
 - SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
 - Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_195244.json`
 - Tool version: `f2691f82f592`
+
+
+### Search: "McKinsey Company federal contracts" (2026-04-10T20:04:10.655792)
+
+## Chain of Custody
+
+**Source 1:**
+- URL: `https://projects.propublica.org/nonprofits/api/v2/search.json?q=McKinsey+Company+federal+contracts&page=0`
+- Retrieved: 2026-04-10T20:04:04.863048
+- SHA-256: `4ddb92190a476f317d2a845cf180af0603b0f4d7d7f38f4429d6c28426c766d2`
+- Local cache: `data/cache/propublica_https___projects.propublica.org_nonprofits_api_v2_search.json_q_McKinsey_Company_20260410_200404.json`
+- Tool version: `7e3dde36f455`
+
+**Source 2:**
+- URL: `https://api.opensanctions.org/search/default?q=McKinsey+Company+federal+contracts&limit=25`
+- Retrieved: 2026-04-10T20:04:04.903845
+- SHA-256: `58b584470305494aa5dc11bc845cba894585755e831e7014b113cc723e625a21`
+- Local cache: `data/cache/opensanctions_https___api.opensanctions.org_search_default_q_McKinsey_Company_federal_contract_20260410_200404.json`
+- Tool version: `7e3dde36f455`
+
+**Source 3:**
+- URL: `https://api.usaspending.gov/api/v2/autocomplete/recipient/`
+- Retrieved: 2026-04-10T20:04:05.252770
+- SHA-256: `6d875e12098a54a9cde69b22d7bf824446a801477ddec75040ff6db8d70f8cc9`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_autocomplete_recipient__20260410_200405.json`
+- Tool version: `7e3dde36f455`
+
+**Source 4:**
+- URL: `https://api.open.fec.gov/v1/candidates/search/?api_key=Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xeiLFmUeILG&q=McKinsey+Company+federal+contracts&per_page=20`
+- Retrieved: 2026-04-10T20:04:05.270791
+- SHA-256: `a916e4c4ebea39b068b4510e1b19fbc1709557519c0832b2619f12422088a108`
+- Local cache: `data/cache/openfec_https___api.open.fec.gov_v1_candidates_search__api_key_Xr8mtIPX8UMdkLKCfgdcMfjRO_20260410_200405.json`
+- Tool version: `7e3dde36f455`
+
+**Source 5:**
+- URL: `https://api.open.fec.gov/v1/committees/?api_key=Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xeiLFmUeILG&q=McKinsey+Company+federal+contracts&per_page=20`
+- Retrieved: 2026-04-10T20:04:05.436266
+- SHA-256: `a916e4c4ebea39b068b4510e1b19fbc1709557519c0832b2619f12422088a108`
+- Local cache: `data/cache/openfec_https___api.open.fec.gov_v1_committees__api_key_Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xei_20260410_200405.json`
+- Tool version: `7e3dde36f455`
+
+**Source 6:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:05.533241
+- SHA-256: `26041f24c8503f4973c53d449bb6ebec1c7c37037bd5a02357005970d5257342`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200405.json`
+- Tool version: `7e3dde36f455`
+
+**Source 7:**
+- URL: `https://api.open.fec.gov/v1/committees/?api_key=Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xeiLFmUeILG&q=McKinsey+Company+federal+contracts+PAC&per_page=20`
+- Retrieved: 2026-04-10T20:04:05.598481
+- SHA-256: `a916e4c4ebea39b068b4510e1b19fbc1709557519c0832b2619f12422088a108`
+- Local cache: `data/cache/openfec_https___api.open.fec.gov_v1_committees__api_key_Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xei_20260410_200405.json`
+- Tool version: `7e3dde36f455`
+
+**Source 8:**
+- URL: `https://www.courtlistener.com/api/rest/v4/search/?q=McKinsey+Company+federal+contracts&type=r&page_size=20`
+- Retrieved: 2026-04-10T20:04:06.149194
+- SHA-256: `72b6b7ec0d8585b94d44f92d638dbabce2d84b063e7deb323e0df604b290db61`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_search__q_McKinsey_Company_federal_con_20260410_200406.json`
+- Tool version: `7e3dde36f455`
+
+**Source 9:**
+- URL: `https://www.courtlistener.com/api/rest/v4/search/?q=McKinsey+Company+federal+contracts&type=o&page_size=10`
+- Retrieved: 2026-04-10T20:04:06.528742
+- SHA-256: `a6fa0e9ca74dd359a1193a0d6decba16bf500d12a4caf82598f7711834769b67`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_search__q_McKinsey_Company_federal_con_20260410_200406.json`
+- Tool version: `7e3dde36f455`
+
+**Source 10:**
+- URL: `https://efts.sec.gov/LATEST/search-index?q=%22McKinsey+Company+federal+contracts%22&dateRange=custom&forms=10-K%2C10-Q%2C8-K%2CDEF+14A%2CSC+13D%2CSC+13G%2C4`
+- Retrieved: 2026-04-10T20:04:07.021717
+- SHA-256: `460dc5b02e6c9e281fd0b561da01b65d95180a0ccac91dbabad6f7c35c3bf485`
+- Local cache: `data/cache/sec_edgar_https___efts.sec.gov_LATEST_search-index_q__22McKinsey_Company_federal_contracts_20260410_200407.json`
+- Tool version: `7e3dde36f455`
+
+**Source 11:**
+- URL: `https://efts.sec.gov/LATEST/search-index?q=McKinsey+Company+federal+contracts&forms=10-K`
+- Retrieved: 2026-04-10T20:04:08.273400
+- SHA-256: `db3e553eafd6d0c57ff51419923b8e2642684da908237e58c8b33e1ffc796542`
+- Local cache: `data/cache/sec_edgar_https___efts.sec.gov_LATEST_search-index_q_McKinsey_Company_federal_contracts_fo_20260410_200408.json`
+- Tool version: `7e3dde36f455`
+
+**Source 12:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/16301595/`
+- Retrieved: 2026-04-10T20:04:08.589960
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_16301595__20260410_200408.json`
+- Tool version: `7e3dde36f455`
+
+**Source 13:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/4534568/`
+- Retrieved: 2026-04-10T20:04:08.740223
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_4534568__20260410_200408.json`
+- Tool version: `7e3dde36f455`
+
+**Source 14:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/6524718/`
+- Retrieved: 2026-04-10T20:04:08.775370
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_6524718__20260410_200408.json`
+- Tool version: `7e3dde36f455`
+
+**Source 15:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:08.949070
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200408.json`
+- Tool version: `7e3dde36f455`
+
+**Source 16:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:08.975046
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200408.json`
+- Tool version: `7e3dde36f455`
+
+**Source 17:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:09.004332
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200409.json`
+- Tool version: `7e3dde36f455`
+
+**Source 18:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:09.030294
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200409.json`
+- Tool version: `7e3dde36f455`
+
+**Source 19:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:09.057801
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200409.json`
+- Tool version: `7e3dde36f455`
+
+**Source 20:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:09.090267
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200409.json`
+- Tool version: `7e3dde36f455`
+
+**Source 21:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:09.116930
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200409.json`
+- Tool version: `7e3dde36f455`
+
+**Source 22:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:09.135469
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200409.json`
+- Tool version: `7e3dde36f455`
+
+**Source 23:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:09.165948
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200409.json`
+- Tool version: `7e3dde36f455`
+
+**Source 24:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:09.186169
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200409.json`
+- Tool version: `7e3dde36f455`
+
+**Source 25:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/4534568/`
+- Retrieved: 2026-04-10T20:04:09.792301
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_4534568__20260410_200409.json`
+- Tool version: `7e3dde36f455`
+
+**Source 26:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/16301595/`
+- Retrieved: 2026-04-10T20:04:09.830519
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_16301595__20260410_200409.json`
+- Tool version: `7e3dde36f455`
+
+**Source 27:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/6524718/`
+- Retrieved: 2026-04-10T20:04:09.883286
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_6524718__20260410_200409.json`
+- Tool version: `7e3dde36f455`
+
+**Source 28:**
+- URL: `https://data.sec.gov/submissions/CIK['000-52838'].json`
+- Retrieved: 2026-04-10T20:04:09.974909
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__000-52838__.json_20260410_200409.json`
+- Tool version: `7e3dde36f455`
+
+**Source 29:**
+- URL: `https://data.sec.gov/submissions/CIK['000-53463'].json`
+- Retrieved: 2026-04-10T20:04:10.000941
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__000-53463__.json_20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 30:**
+- URL: `https://data.sec.gov/submissions/CIK['001-05397'].json`
+- Retrieved: 2026-04-10T20:04:10.028695
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-05397__.json_20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 31:**
+- URL: `https://data.sec.gov/submissions/CIK['000-54546'].json`
+- Retrieved: 2026-04-10T20:04:10.054199
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__000-54546__.json_20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 32:**
+- URL: `https://data.sec.gov/submissions/CIK['001-40932'].json`
+- Retrieved: 2026-04-10T20:04:10.074533
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-40932__.json_20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 33:**
+- URL: `https://data.sec.gov/submissions/CIK['000-24799'].json`
+- Retrieved: 2026-04-10T20:04:10.099877
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__000-24799__.json_20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 34:**
+- URL: `https://data.sec.gov/submissions/CIK['001-39744'].json`
+- Retrieved: 2026-04-10T20:04:10.195605
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-39744__.json_20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 35:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:10.214041
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 36:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:10.227562
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 37:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:10.239375
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 38:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:10.251824
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 39:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:10.266255
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 40:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:10.282006
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 41:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:10.296686
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 42:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:10.313591
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 43:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:10.324245
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+**Source 44:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:10.334078
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200410.json`
+- Tool version: `7e3dde36f455`
+
+
+### Search: "West Virginia opioid settlement spending" (2026-04-10T20:04:17.496576)
+
+## Chain of Custody
+
+**Source 1:**
+- URL: `https://api.opensanctions.org/search/default?q=West+Virginia+opioid+settlement+spending&limit=25`
+- Retrieved: 2026-04-10T20:04:12.022624
+- SHA-256: `58b584470305494aa5dc11bc845cba894585755e831e7014b113cc723e625a21`
+- Local cache: `data/cache/opensanctions_https___api.opensanctions.org_search_default_q_West_Virginia_opioid_settlement_s_20260410_200412.json`
+- Tool version: `7e3dde36f455`
+
+**Source 2:**
+- URL: `https://projects.propublica.org/nonprofits/api/v2/search.json?q=West+Virginia+opioid+settlement+spending&page=0`
+- Retrieved: 2026-04-10T20:04:12.045890
+- SHA-256: `83d0298e3a80cf1675fb7006ffb5f845c08f99af98c59b054785f77ce8b4e75a`
+- Local cache: `data/cache/propublica_https___projects.propublica.org_nonprofits_api_v2_search.json_q_West_Virginia_op_20260410_200412.json`
+- Tool version: `7e3dde36f455`
+
+**Source 3:**
+- URL: `https://api.open.fec.gov/v1/candidates/search/?api_key=Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xeiLFmUeILG&q=West+Virginia+opioid+settlement+spending&per_page=20`
+- Retrieved: 2026-04-10T20:04:12.250826
+- SHA-256: `a916e4c4ebea39b068b4510e1b19fbc1709557519c0832b2619f12422088a108`
+- Local cache: `data/cache/openfec_https___api.open.fec.gov_v1_candidates_search__api_key_Xr8mtIPX8UMdkLKCfgdcMfjRO_20260410_200412.json`
+- Tool version: `7e3dde36f455`
+
+**Source 4:**
+- URL: `https://api.usaspending.gov/api/v2/autocomplete/recipient/`
+- Retrieved: 2026-04-10T20:04:12.410888
+- SHA-256: `6d875e12098a54a9cde69b22d7bf824446a801477ddec75040ff6db8d70f8cc9`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_autocomplete_recipient__20260410_200412.json`
+- Tool version: `7e3dde36f455`
+
+**Source 5:**
+- URL: `https://api.open.fec.gov/v1/committees/?api_key=Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xeiLFmUeILG&q=West+Virginia+opioid+settlement+spending&per_page=20`
+- Retrieved: 2026-04-10T20:04:12.432225
+- SHA-256: `a916e4c4ebea39b068b4510e1b19fbc1709557519c0832b2619f12422088a108`
+- Local cache: `data/cache/openfec_https___api.open.fec.gov_v1_committees__api_key_Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xei_20260410_200412.json`
+- Tool version: `7e3dde36f455`
+
+**Source 6:**
+- URL: `https://api.open.fec.gov/v1/committees/?api_key=Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xeiLFmUeILG&q=West+Virginia+opioid+settlement+spending+PAC&per_page=20`
+- Retrieved: 2026-04-10T20:04:12.624050
+- SHA-256: `a916e4c4ebea39b068b4510e1b19fbc1709557519c0832b2619f12422088a108`
+- Local cache: `data/cache/openfec_https___api.open.fec.gov_v1_committees__api_key_Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xei_20260410_200412.json`
+- Tool version: `7e3dde36f455`
+
+**Source 7:**
+- URL: `https://www.courtlistener.com/api/rest/v4/search/?q=West+Virginia+opioid+settlement+spending&type=r&page_size=20`
+- Retrieved: 2026-04-10T20:04:12.663712
+- SHA-256: `534d6c52354371cea471cbd699250cd1d22b35c161ecec9b7b280a73d42633eb`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_search__q_West_Virginia_opioid_settlem_20260410_200412.json`
+- Tool version: `7e3dde36f455`
+
+**Source 8:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:12.784220
+- SHA-256: `26041f24c8503f4973c53d449bb6ebec1c7c37037bd5a02357005970d5257342`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200412.json`
+- Tool version: `7e3dde36f455`
+
+**Source 9:**
+- URL: `https://efts.sec.gov/LATEST/search-index?q=%22West+Virginia+opioid+settlement+spending%22&dateRange=custom&forms=10-K%2C10-Q%2C8-K%2CDEF+14A%2CSC+13D%2CSC+13G%2C4`
+- Retrieved: 2026-04-10T20:04:13.092756
+- SHA-256: `8e552515f453f5fa7769dc623738fc308f6d7773a22d696857276747cef7acbf`
+- Local cache: `data/cache/sec_edgar_https___efts.sec.gov_LATEST_search-index_q__22West_Virginia_opioid_settlement_sp_20260410_200413.json`
+- Tool version: `7e3dde36f455`
+
+**Source 10:**
+- URL: `https://www.courtlistener.com/api/rest/v4/search/?q=West+Virginia+opioid+settlement+spending&type=o&page_size=10`
+- Retrieved: 2026-04-10T20:04:13.472728
+- SHA-256: `4817d589370fa508342996a7c29511465a9652610db632d7bd7f392cd8ae4543`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_search__q_West_Virginia_opioid_settlem_20260410_200413.json`
+- Tool version: `7e3dde36f455`
+
+**Source 11:**
+- URL: `https://efts.sec.gov/LATEST/search-index?q=West+Virginia+opioid+settlement+spending&forms=10-K`
+- Retrieved: 2026-04-10T20:04:15.389944
+- SHA-256: `328c815f9f617dad3aa4bdf19a08f116fee7af7bdbf0b57991a5cdfb69a096ca`
+- Local cache: `data/cache/sec_edgar_https___efts.sec.gov_LATEST_search-index_q_West_Virginia_opioid_settlement_spend_20260410_200415.json`
+- Tool version: `7e3dde36f455`
+
+**Source 12:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/59882297/`
+- Retrieved: 2026-04-10T20:04:15.762414
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_59882297__20260410_200415.json`
+- Tool version: `7e3dde36f455`
+
+**Source 13:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/15776115/`
+- Retrieved: 2026-04-10T20:04:15.825839
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_15776115__20260410_200415.json`
+- Tool version: `7e3dde36f455`
+
+**Source 14:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/65418210/`
+- Retrieved: 2026-04-10T20:04:15.904457
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_65418210__20260410_200415.json`
+- Tool version: `7e3dde36f455`
+
+**Source 15:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/2653628/`
+- Retrieved: 2026-04-10T20:04:15.933099
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_2653628__20260410_200415.json`
+- Tool version: `7e3dde36f455`
+
+**Source 16:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:16.000522
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 17:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:16.022779
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 18:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:16.047631
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 19:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:16.063597
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 20:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:16.154501
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 21:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:16.169583
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 22:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:16.179932
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 23:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:16.189875
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 24:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:16.214581
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 25:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:16.225360
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 26:**
+- URL: `https://data.sec.gov/submissions/CIK['001-13252'].json`
+- Retrieved: 2026-04-10T20:04:16.542758
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-13252__.json_20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 27:**
+- URL: `https://data.sec.gov/submissions/CIK['001-00303'].json`
+- Retrieved: 2026-04-10T20:04:16.564148
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-00303__.json_20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 28:**
+- URL: `https://data.sec.gov/submissions/CIK['001-11373'].json`
+- Retrieved: 2026-04-10T20:04:16.584242
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-11373__.json_20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 29:**
+- URL: `https://data.sec.gov/submissions/CIK['001-35803'].json`
+- Retrieved: 2026-04-10T20:04:16.598521
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-35803__.json_20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 30:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/59882297/`
+- Retrieved: 2026-04-10T20:04:16.611121
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_59882297__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 31:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/2653628/`
+- Retrieved: 2026-04-10T20:04:16.621787
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_2653628__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 32:**
+- URL: `https://data.sec.gov/submissions/CIK['001-16671'].json`
+- Retrieved: 2026-04-10T20:04:16.633521
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-16671__.json_20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 33:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/15776115/`
+- Retrieved: 2026-04-10T20:04:16.643525
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_15776115__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 34:**
+- URL: `https://data.sec.gov/submissions/CIK['001-37372'].json`
+- Retrieved: 2026-04-10T20:04:16.655781
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-37372__.json_20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 35:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/65418210/`
+- Retrieved: 2026-04-10T20:04:16.723892
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_65418210__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 36:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:16.900538
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 37:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:16.929688
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 38:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:16.969129
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 39:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:16.980712
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200416.json`
+- Tool version: `7e3dde36f455`
+
+**Source 40:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:17.043735
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200417.json`
+- Tool version: `7e3dde36f455`
+
+**Source 41:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:17.056960
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200417.json`
+- Tool version: `7e3dde36f455`
+
+**Source 42:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:17.070769
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200417.json`
+- Tool version: `7e3dde36f455`
+
+**Source 43:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:17.278538
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200417.json`
+- Tool version: `7e3dde36f455`
+
+**Source 44:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:17.338495
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200417.json`
+- Tool version: `7e3dde36f455`
+
+**Source 45:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:17.394693
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200417.json`
+- Tool version: `7e3dde36f455`
+
+
+### Search: "New Jersey opioid settlement fund" (2026-04-10T20:04:24.311522)
+
+## Chain of Custody
+
+**Source 1:**
+- URL: `https://projects.propublica.org/nonprofits/api/v2/search.json?q=New+Jersey+opioid+settlement+fund&page=0`
+- Retrieved: 2026-04-10T20:04:18.785443
+- SHA-256: `94d64b9ed227c9b2b245f1b94498e021ec2f4ad4a70a15c0cf24b38445bca42d`
+- Local cache: `data/cache/propublica_https___projects.propublica.org_nonprofits_api_v2_search.json_q_New_Jersey_opioi_20260410_200418.json`
+- Tool version: `7e3dde36f455`
+
+**Source 2:**
+- URL: `https://api.opensanctions.org/search/default?q=New+Jersey+opioid+settlement+fund&limit=25`
+- Retrieved: 2026-04-10T20:04:18.816609
+- SHA-256: `58b584470305494aa5dc11bc845cba894585755e831e7014b113cc723e625a21`
+- Local cache: `data/cache/opensanctions_https___api.opensanctions.org_search_default_q_New_Jersey_opioid_settlement_fund_20260410_200418.json`
+- Tool version: `7e3dde36f455`
+
+**Source 3:**
+- URL: `https://api.open.fec.gov/v1/candidates/search/?api_key=Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xeiLFmUeILG&q=New+Jersey+opioid+settlement+fund&per_page=20`
+- Retrieved: 2026-04-10T20:04:18.873423
+- SHA-256: `a916e4c4ebea39b068b4510e1b19fbc1709557519c0832b2619f12422088a108`
+- Local cache: `data/cache/openfec_https___api.open.fec.gov_v1_candidates_search__api_key_Xr8mtIPX8UMdkLKCfgdcMfjRO_20260410_200418.json`
+- Tool version: `7e3dde36f455`
+
+**Source 4:**
+- URL: `https://api.open.fec.gov/v1/committees/?api_key=Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xeiLFmUeILG&q=New+Jersey+opioid+settlement+fund&per_page=20`
+- Retrieved: 2026-04-10T20:04:19.062427
+- SHA-256: `a916e4c4ebea39b068b4510e1b19fbc1709557519c0832b2619f12422088a108`
+- Local cache: `data/cache/openfec_https___api.open.fec.gov_v1_committees__api_key_Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xei_20260410_200419.json`
+- Tool version: `7e3dde36f455`
+
+**Source 5:**
+- URL: `https://www.courtlistener.com/api/rest/v4/search/?q=New+Jersey+opioid+settlement+fund&type=r&page_size=20`
+- Retrieved: 2026-04-10T20:04:19.535996
+- SHA-256: `1218154e790c3e0605a5c3483de1cc1d3294038159142d45e5b6a730fc215eca`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_search__q_New_Jersey_opioid_settlement_20260410_200419.json`
+- Tool version: `7e3dde36f455`
+
+**Source 6:**
+- URL: `https://api.open.fec.gov/v1/committees/?api_key=Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xeiLFmUeILG&q=New+Jersey+opioid+settlement+fund+PAC&per_page=20`
+- Retrieved: 2026-04-10T20:04:19.600142
+- SHA-256: `a916e4c4ebea39b068b4510e1b19fbc1709557519c0832b2619f12422088a108`
+- Local cache: `data/cache/openfec_https___api.open.fec.gov_v1_committees__api_key_Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xei_20260410_200419.json`
+- Tool version: `7e3dde36f455`
+
+**Source 7:**
+- URL: `https://www.courtlistener.com/api/rest/v4/search/?q=New+Jersey+opioid+settlement+fund&type=o&page_size=10`
+- Retrieved: 2026-04-10T20:04:20.146927
+- SHA-256: `a7eb491d1097362265698201b468ffe773b7ede69f69284b417ce4ba0a6ae3ed`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_search__q_New_Jersey_opioid_settlement_20260410_200420.json`
+- Tool version: `7e3dde36f455`
+
+**Source 8:**
+- URL: `https://efts.sec.gov/LATEST/search-index?q=%22New+Jersey+opioid+settlement+fund%22&dateRange=custom&forms=10-K%2C10-Q%2C8-K%2CDEF+14A%2CSC+13D%2CSC+13G%2C4`
+- Retrieved: 2026-04-10T20:04:20.541145
+- SHA-256: `1d335b647de0dcf5432e51d2d7db4285d34b8519cc3a18e5c9aadbb9e5cea300`
+- Local cache: `data/cache/sec_edgar_https___efts.sec.gov_LATEST_search-index_q__22New_Jersey_opioid_settlement_fund__20260410_200420.json`
+- Tool version: `7e3dde36f455`
+
+**Source 9:**
+- URL: `https://api.usaspending.gov/api/v2/autocomplete/recipient/`
+- Retrieved: 2026-04-10T20:04:21.160377
+- SHA-256: `6d875e12098a54a9cde69b22d7bf824446a801477ddec75040ff6db8d70f8cc9`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_autocomplete_recipient__20260410_200421.json`
+- Tool version: `7e3dde36f455`
+
+**Source 10:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:21.468477
+- SHA-256: `26041f24c8503f4973c53d449bb6ebec1c7c37037bd5a02357005970d5257342`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200421.json`
+- Tool version: `7e3dde36f455`
+
+**Source 11:**
+- URL: `https://efts.sec.gov/LATEST/search-index?q=New+Jersey+opioid+settlement+fund&forms=10-K`
+- Retrieved: 2026-04-10T20:04:22.228990
+- SHA-256: `9d1bc45d7d97308a35f5c7ba9ee7d94172af05d407fe9db41cc976623b25e7eb`
+- Local cache: `data/cache/sec_edgar_https___efts.sec.gov_LATEST_search-index_q_New_Jersey_opioid_settlement_fund_for_20260410_200422.json`
+- Tool version: `7e3dde36f455`
+
+**Source 12:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/65738623/`
+- Retrieved: 2026-04-10T20:04:22.759831
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_65738623__20260410_200422.json`
+- Tool version: `7e3dde36f455`
+
+**Source 13:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/69165748/`
+- Retrieved: 2026-04-10T20:04:22.775685
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_69165748__20260410_200422.json`
+- Tool version: `7e3dde36f455`
+
+**Source 14:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/10655758/`
+- Retrieved: 2026-04-10T20:04:22.788276
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_10655758__20260410_200422.json`
+- Tool version: `7e3dde36f455`
+
+**Source 15:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/69010016/`
+- Retrieved: 2026-04-10T20:04:22.802034
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_69010016__20260410_200422.json`
+- Tool version: `7e3dde36f455`
+
+**Source 16:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/15788611/`
+- Retrieved: 2026-04-10T20:04:22.882759
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_15788611__20260410_200422.json`
+- Tool version: `7e3dde36f455`
+
+**Source 17:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:23.066937
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 18:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:23.084983
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 19:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:23.098230
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 20:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:23.108944
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 21:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:23.151857
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 22:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:23.229522
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 23:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:23.243484
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 24:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:23.270235
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 25:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:23.353488
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 26:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:23.371108
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 27:**
+- URL: `https://data.sec.gov/submissions/CIK['001-10113'].json`
+- Retrieved: 2026-04-10T20:04:23.678542
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-10113__.json_20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 28:**
+- URL: `https://data.sec.gov/submissions/CIK['001-16671'].json`
+- Retrieved: 2026-04-10T20:04:23.720563
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-16671__.json_20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 29:**
+- URL: `https://data.sec.gov/submissions/CIK['001-35803'].json`
+- Retrieved: 2026-04-10T20:04:23.733564
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-35803__.json_20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 30:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/15788611/`
+- Retrieved: 2026-04-10T20:04:23.743827
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_15788611__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 31:**
+- URL: `https://data.sec.gov/submissions/CIK['001-13111'].json`
+- Retrieved: 2026-04-10T20:04:23.756154
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-13111__.json_20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 32:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/69165748/`
+- Retrieved: 2026-04-10T20:04:23.767751
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_69165748__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 33:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/65738623/`
+- Retrieved: 2026-04-10T20:04:23.777606
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_65738623__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 34:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/69010016/`
+- Retrieved: 2026-04-10T20:04:23.787141
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_69010016__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 35:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/10655758/`
+- Retrieved: 2026-04-10T20:04:23.797860
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_10655758__20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 36:**
+- URL: `https://data.sec.gov/submissions/CIK['001-35902'].json`
+- Retrieved: 2026-04-10T20:04:23.955965
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-35902__.json_20260410_200423.json`
+- Tool version: `7e3dde36f455`
+
+**Source 37:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:24.013348
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200424.json`
+- Tool version: `7e3dde36f455`
+
+**Source 38:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:24.037637
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200424.json`
+- Tool version: `7e3dde36f455`
+
+**Source 39:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:24.054920
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200424.json`
+- Tool version: `7e3dde36f455`
+
+**Source 40:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:24.077818
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200424.json`
+- Tool version: `7e3dde36f455`
+
+**Source 41:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:24.093094
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200424.json`
+- Tool version: `7e3dde36f455`
+
+**Source 42:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:24.104309
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200424.json`
+- Tool version: `7e3dde36f455`
+
+**Source 43:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:24.118099
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200424.json`
+- Tool version: `7e3dde36f455`
+
+**Source 44:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:24.137599
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200424.json`
+- Tool version: `7e3dde36f455`
+
+**Source 45:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:24.148705
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200424.json`
+- Tool version: `7e3dde36f455`
+
+**Source 46:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:04:24.164736
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200424.json`
+- Tool version: `7e3dde36f455`
+
+
+### Search: "McKinsey Company Inc consulting" (2026-04-10T20:09:15.051422)
+
+## Chain of Custody
+
+**Source 1:**
+- URL: `https://api.opensanctions.org/search/default?q=McKinsey+Company+Inc+consulting&limit=25`
+- Retrieved: 2026-04-10T20:09:08.705585
+- SHA-256: `58b584470305494aa5dc11bc845cba894585755e831e7014b113cc723e625a21`
+- Local cache: `data/cache/opensanctions_https___api.opensanctions.org_search_default_q_McKinsey_Company_Inc_consulting_l_20260410_200908.json`
+- Tool version: `7e3dde36f455`
+
+**Source 2:**
+- URL: `https://projects.propublica.org/nonprofits/api/v2/search.json?q=McKinsey+Company+Inc+consulting&page=0`
+- Retrieved: 2026-04-10T20:09:08.775275
+- SHA-256: `655eae29acfc36626cd7b854da3b7e290656344694cecdaae6c7f4f5fef382a8`
+- Local cache: `data/cache/propublica_https___projects.propublica.org_nonprofits_api_v2_search.json_q_McKinsey_Company_20260410_200908.json`
+- Tool version: `7e3dde36f455`
+
+**Source 3:**
+- URL: `https://api.open.fec.gov/v1/candidates/search/?api_key=Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xeiLFmUeILG&q=McKinsey+Company+Inc+consulting&per_page=20`
+- Retrieved: 2026-04-10T20:09:08.944877
+- SHA-256: `a916e4c4ebea39b068b4510e1b19fbc1709557519c0832b2619f12422088a108`
+- Local cache: `data/cache/openfec_https___api.open.fec.gov_v1_candidates_search__api_key_Xr8mtIPX8UMdkLKCfgdcMfjRO_20260410_200908.json`
+- Tool version: `7e3dde36f455`
+
+**Source 4:**
+- URL: `https://api.open.fec.gov/v1/committees/?api_key=Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xeiLFmUeILG&q=McKinsey+Company+Inc+consulting&per_page=20`
+- Retrieved: 2026-04-10T20:09:09.125569
+- SHA-256: `a916e4c4ebea39b068b4510e1b19fbc1709557519c0832b2619f12422088a108`
+- Local cache: `data/cache/openfec_https___api.open.fec.gov_v1_committees__api_key_Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xei_20260410_200909.json`
+- Tool version: `7e3dde36f455`
+
+**Source 5:**
+- URL: `https://api.open.fec.gov/v1/committees/?api_key=Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xeiLFmUeILG&q=McKinsey+Company+Inc+consulting+PAC&per_page=20`
+- Retrieved: 2026-04-10T20:09:09.300697
+- SHA-256: `a916e4c4ebea39b068b4510e1b19fbc1709557519c0832b2619f12422088a108`
+- Local cache: `data/cache/openfec_https___api.open.fec.gov_v1_committees__api_key_Xr8mtIPX8UMdkLKCfgdcMfjROc5x7xei_20260410_200909.json`
+- Tool version: `7e3dde36f455`
+
+**Source 6:**
+- URL: `https://api.usaspending.gov/api/v2/autocomplete/recipient/`
+- Retrieved: 2026-04-10T20:09:09.495798
+- SHA-256: `6d875e12098a54a9cde69b22d7bf824446a801477ddec75040ff6db8d70f8cc9`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_autocomplete_recipient__20260410_200909.json`
+- Tool version: `7e3dde36f455`
+
+**Source 7:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:09.762959
+- SHA-256: `26041f24c8503f4973c53d449bb6ebec1c7c37037bd5a02357005970d5257342`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200909.json`
+- Tool version: `7e3dde36f455`
+
+**Source 8:**
+- URL: `https://efts.sec.gov/LATEST/search-index?q=%22McKinsey+Company+Inc+consulting%22&dateRange=custom&forms=10-K%2C10-Q%2C8-K%2CDEF+14A%2CSC+13D%2CSC+13G%2C4`
+- Retrieved: 2026-04-10T20:09:10.426551
+- SHA-256: `aef8f04a741b223a47bbebbb7b3883f12cf090d2879fce00f35a653567b3b082`
+- Local cache: `data/cache/sec_edgar_https___efts.sec.gov_LATEST_search-index_q__22McKinsey_Company_Inc_consulting_22_20260410_200910.json`
+- Tool version: `7e3dde36f455`
+
+**Source 9:**
+- URL: `https://www.courtlistener.com/api/rest/v4/search/?q=McKinsey+Company+Inc+consulting&type=r&page_size=20`
+- Retrieved: 2026-04-10T20:09:10.918824
+- SHA-256: `eb9e9db7a6d1f15f0166ffd87417a799295f987daef5b5c70282dfed02384661`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_search__q_McKinsey_Company_Inc_consult_20260410_200910.json`
+- Tool version: `7e3dde36f455`
+
+**Source 10:**
+- URL: `https://efts.sec.gov/LATEST/search-index?q=McKinsey+Company+Inc+consulting&forms=10-K`
+- Retrieved: 2026-04-10T20:09:11.273865
+- SHA-256: `f02d4e9e20f42aab3ac773b31a5c619443010c4a2faa1ef40b360dfdbd515510`
+- Local cache: `data/cache/sec_edgar_https___efts.sec.gov_LATEST_search-index_q_McKinsey_Company_Inc_consulting_forms_20260410_200911.json`
+- Tool version: `7e3dde36f455`
+
+**Source 11:**
+- URL: `https://www.courtlistener.com/api/rest/v4/search/?q=McKinsey+Company+Inc+consulting&type=o&page_size=10`
+- Retrieved: 2026-04-10T20:09:13.105212
+- SHA-256: `e24f95bce2ffca6738e01489d7c2862d3ab09571a30742758d0165c864cb4e30`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_search__q_McKinsey_Company_Inc_consult_20260410_200913.json`
+- Tool version: `7e3dde36f455`
+
+**Source 12:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/61609559/`
+- Retrieved: 2026-04-10T20:09:13.522818
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_61609559__20260410_200913.json`
+- Tool version: `7e3dde36f455`
+
+**Source 13:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:13.728294
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200913.json`
+- Tool version: `7e3dde36f455`
+
+**Source 14:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:13.764621
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200913.json`
+- Tool version: `7e3dde36f455`
+
+**Source 15:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:13.789382
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200913.json`
+- Tool version: `7e3dde36f455`
+
+**Source 16:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:13.806343
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200913.json`
+- Tool version: `7e3dde36f455`
+
+**Source 17:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:13.819003
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200913.json`
+- Tool version: `7e3dde36f455`
+
+**Source 18:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:13.827642
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200913.json`
+- Tool version: `7e3dde36f455`
+
+**Source 19:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:13.836333
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200913.json`
+- Tool version: `7e3dde36f455`
+
+**Source 20:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:13.896077
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200913.json`
+- Tool version: `7e3dde36f455`
+
+**Source 21:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:13.930925
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200913.json`
+- Tool version: `7e3dde36f455`
+
+**Source 22:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:13.979901
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200913.json`
+- Tool version: `7e3dde36f455`
+
+**Source 23:**
+- URL: `https://data.sec.gov/submissions/CIK['000-54546'].json`
+- Retrieved: 2026-04-10T20:09:14.342952
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__000-54546__.json_20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 24:**
+- URL: `https://data.sec.gov/submissions/CIK['000-49968'].json`
+- Retrieved: 2026-04-10T20:09:14.457609
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__000-49968__.json_20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 25:**
+- URL: `https://data.sec.gov/submissions/CIK['001-11064'].json`
+- Retrieved: 2026-04-10T20:09:14.483933
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-11064__.json_20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 26:**
+- URL: `https://data.sec.gov/submissions/CIK['001-36046'].json`
+- Retrieved: 2026-04-10T20:09:14.501397
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-36046__.json_20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 27:**
+- URL: `https://data.sec.gov/submissions/CIK['000-24799'].json`
+- Retrieved: 2026-04-10T20:09:14.515769
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__000-24799__.json_20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 28:**
+- URL: `https://data.sec.gov/submissions/CIK['001-05397'].json`
+- Retrieved: 2026-04-10T20:09:14.526366
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-05397__.json_20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 29:**
+- URL: `https://data.sec.gov/submissions/CIK['001-12657'].json`
+- Retrieved: 2026-04-10T20:09:14.537581
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-12657__.json_20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 30:**
+- URL: `https://www.courtlistener.com/api/rest/v4/dockets/61609559/`
+- Retrieved: 2026-04-10T20:09:14.546949
+- SHA-256: `dbff0849bc109eee7f9b7b1fe12e40fc8add21823b2f1fb600b37f620cbd7862`
+- Local cache: `data/cache/courtlistener_https___www.courtlistener.com_api_rest_v4_dockets_61609559__20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 31:**
+- URL: `https://data.sec.gov/submissions/CIK['001-05277'].json`
+- Retrieved: 2026-04-10T20:09:14.558310
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-05277__.json_20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 32:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:14.657387
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 33:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:14.704634
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 34:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:14.780374
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 35:**
+- URL: `https://data.sec.gov/submissions/CIK['001-39300'].json`
+- Retrieved: 2026-04-10T20:09:14.803278
+- SHA-256: `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+- Local cache: `data/cache/sec_edgar_https___data.sec.gov_submissions_CIK__001-39300__.json_20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 36:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:14.817817
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 37:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:14.830411
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 38:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:14.872042
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 39:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:14.906259
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 40:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:14.919794
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 41:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:14.930612
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200914.json`
+- Tool version: `7e3dde36f455`
+
+**Source 42:**
+- URL: `https://api.usaspending.gov/api/v2/search/spending_by_award/`
+- Retrieved: 2026-04-10T20:09:14.941564
+- SHA-256: `3ae03aec059a05e5d1de845137690da94123d5c910446f0157c363f1888ddb82`
+- Local cache: `data/cache/usaspending_https___api.usaspending.gov_api_v2_search_spending_by_award__20260410_200914.json`
+- Tool version: `7e3dde36f455`

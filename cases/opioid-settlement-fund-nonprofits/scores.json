@@ -1,7 +1,7 @@
 [
   {
-    "entity_id": "court:8112008",
-    "entity_name": "United States v. BOWERS",
+    "entity_id": "sec:['001-12657']",
+    "entity_name": "ACTERNA CORP  (CIK 0000030841)",
     "total_score": 0.0,
     "components": {
       "sanctions_pep": 0.0,
@@ -13,14 +13,12 @@
       "network_centrality": 0.0,
       "recency": 0.0
     },
-    "flags": [
-      "litigated"
-    ],
-    "explanation": "United States v. BOWERS: No significant investigative indicators detected."
+    "flags": [],
+    "explanation": "ACTERNA CORP  (CIK 0000030841): No significant investigative indicators detected."
   },
   {
-    "entity_id": "court:16758858",
-    "entity_name": "City of Huntington, West Virginia v. AmerisourceBergen Drug Corporation",
+    "entity_id": "court:61609559",
+    "entity_name": "Branch, County of v. McKinsey and Company, Inc.",
     "total_score": 0.0,
     "components": {
       "sanctions_pep": 0.0,
@@ -35,11 +33,11 @@
     "flags": [
       "litigated"
     ],
-    "explanation": "City of Huntington, West Virginia v. AmerisourceBergen Drug Corporation: No significant investigative indicators detected."
+    "explanation": "Branch, County of v. McKinsey and Company, Inc.: No significant investigative indicators detected."
   },
   {
-    "entity_id": "court:72060401",
-    "entity_name": "Flipcause, Inc.",
+    "entity_id": "sec:['000-54546']",
+    "entity_name": "Ameri Metro, Inc. (formerly Yellowwood)  (CIK 0001534155)",
     "total_score": 0.0,
     "components": {
       "sanctions_pep": 0.0,
@@ -51,14 +49,318 @@
       "network_centrality": 0.0,
       "recency": 0.0
     },
-    "flags": [
-      "litigated"
-    ],
-    "explanation": "Flipcause, Inc.: No significant investigative indicators detected."
+    "flags": [],
+    "explanation": "Ameri Metro, Inc. (formerly Yellowwood)  (CIK 0001534155): No significant investigative indicators detected."
   },
   {
-    "entity_id": "court:6240169",
-    "entity_name": "In Re: National Prescription Opiate Litigation",
+    "entity_id": "sec:['001-39300']",
+    "entity_name": "Ascena Retail Group, Inc.  (CIK 0001498301)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "Ascena Retail Group, Inc.  (CIK 0001498301): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['001-05397']",
+    "entity_name": "AUTOMATIC DATA PROCESSING INC  (ADP)  (CIK 0000008670)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "AUTOMATIC DATA PROCESSING INC  (ADP)  (CIK 0000008670): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['001-36046']",
+    "entity_name": "Axogen, Inc.  (AXGN)  (CIK 0000805928)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "Axogen, Inc.  (AXGN)  (CIK 0000805928): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['001-05277']",
+    "entity_name": "BEMIS CO INC  (CIK 0000011199)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "BEMIS CO INC  (CIK 0000011199): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['001-11064']",
+    "entity_name": "BRITESMILE INC  (CIK 0000866734)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "BRITESMILE INC  (CIK 0000866734): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['000-24799']",
+    "entity_name": "CORPORATE EXECUTIVE BOARD CO  (CIK 0001066104)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "CORPORATE EXECUTIVE BOARD CO  (CIK 0001066104): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['000-49968']",
+    "entity_name": "COMDISCO HOLDING CO INC  (CIK 0001179484)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "COMDISCO HOLDING CO INC  (CIK 0001179484): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['001-37587']",
+    "entity_name": "CytomX Therapeutics, Inc.  (CTMX)  (CIK 0001501989)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "CytomX Therapeutics, Inc.  (CTMX)  (CIK 0001501989): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['000-52838']",
+    "entity_name": "Digital Brand Media & Marketing Group, Inc.  (DBMM)  (CIK 0001127475)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "Digital Brand Media & Marketing Group, Inc.  (DBMM)  (CIK 0001127475): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['000-55175']",
+    "entity_name": "EFH Group, Inc.  (CIK 0001565700)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "EFH Group, Inc.  (CIK 0001565700): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['000-27572']",
+    "entity_name": "ESC MEDICAL SYSTEMS LTD  (CIK 0001004945)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "ESC MEDICAL SYSTEMS LTD  (CIK 0001004945): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['001-14443']",
+    "entity_name": "GARTNER INC  (IT)  (CIK 0000749251)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "GARTNER INC  (IT)  (CIK 0000749251): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['000-30883']",
+    "entity_name": "I MANY INC  (CIK 0001104017)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "I MANY INC  (CIK 0001104017): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['001-35020']",
+    "entity_name": "InfuSystem Holdings, Inc  (INFU)  (CIK 0001337013)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "InfuSystem Holdings, Inc  (INFU)  (CIK 0001337013): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['000-26977']",
+    "entity_name": "LUMINANT WORLDWIDE CORP  (CIK 0001087322)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "LUMINANT WORLDWIDE CORP  (CIK 0001087322): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['000-24006']",
+    "entity_name": "NEKTAR THERAPEUTICS  (NKTR)  (CIK 0000906709)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "NEKTAR THERAPEUTICS  (NKTR)  (CIK 0000906709): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['000-25857']",
+    "entity_name": "PERSISTENCE SOFTWARE INC  (CIK 0001084400)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "PERSISTENCE SOFTWARE INC  (CIK 0001084400): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "sec:['000-25847']",
+    "entity_name": "RAZORFISH INC  (CIK 0001075088)",
+    "total_score": 0.0,
+    "components": {
+      "sanctions_pep": 0.0,
+      "govt_contracts": 0.0,
+      "court_cases": 0.0,
+      "campaign_finance": 0.0,
+      "corporate_complexity": 0.0,
+      "cross_jurisdiction": 0.0,
+      "network_centrality": 0.0,
+      "recency": 0.0
+    },
+    "flags": [],
+    "explanation": "RAZORFISH INC  (CIK 0001075088): No significant investigative indicators detected."
+  },
+  {
+    "entity_id": "court:opinion:4690435",
+    "entity_name": "WSA Group, PE-PC v. DKI Eng'g & Consulting USA PC",
     "total_score": 0.0,
     "components": {
       "sanctions_pep": 0.0,
@@ -73,6 +375,6 @@
     "flags": [
       "litigated"
     ],
-    "explanation": "In Re: National Prescription Opiate Litigation: No significant investigative indicators detected."
+    "explanation": "WSA Group, PE-PC v. DKI Eng'g & Consulting USA PC: No significant investigative indicators detected."
   }
 ]

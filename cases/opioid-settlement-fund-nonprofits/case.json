@@ -2,7 +2,7 @@
   "name": "opioid settlement fund nonprofits",
   "slug": "opioid-settlement-fund-nonprofits",
   "created": "2026-04-10T19:51:22.376287",
-  "updated": "2026-04-10T19:52:44.762060",
+  "updated": "2026-04-10T20:09:15.048637",
   "searches": [
     {
       "query": "opioid settlement fund nonprofits",
@@ -39,9 +39,33 @@
       "timestamp": "2026-04-10T19:52:44.762052",
       "new_entities": 3,
       "new_connections": 0
+    },
+    {
+      "query": "McKinsey Company federal contracts",
+      "timestamp": "2026-04-10T20:04:10.652483",
+      "new_entities": 25,
+      "new_connections": 0
+    },
+    {
+      "query": "West Virginia opioid settlement spending",
+      "timestamp": "2026-04-10T20:04:17.494434",
+      "new_entities": 12,
+      "new_connections": 0
+    },
+    {
+      "query": "New Jersey opioid settlement fund",
+      "timestamp": "2026-04-10T20:04:24.304373",
+      "new_entities": 11,
+      "new_connections": 0
+    },
+    {
+      "query": "McKinsey Company Inc consulting",
+      "timestamp": "2026-04-10T20:09:15.048625",
+      "new_entities": 17,
+      "new_connections": 0
     }
   ],
-  "entity_count": 60,
+  "entity_count": 125,
   "connection_count": 2,
   "flags_found": [
     "litigated"
